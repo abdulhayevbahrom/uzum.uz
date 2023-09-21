@@ -1,0 +1,44 @@
+.products {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
+    justify-content: center;
+}
+
+main>.main_item {
+    height: 330px;
+    border-radius: 10px;
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+main>.main_item s {
+    color: crimson;
+}
+
+main>.main_item img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+main>.main_item button {
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: 18px;
+}
