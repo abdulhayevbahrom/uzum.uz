@@ -9,8 +9,17 @@ import { GoSearch } from 'react-icons/go'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { BsCart } from 'react-icons/bs'
 import { BiUser } from 'react-icons/bi'
+import { useState } from 'react'
+import { FiX } from 'react-icons/fi'
+import { FiChevronRight } from 'react-icons/fi'
+
+
+import { katalogData } from '../../static/headerData'
 
 function Header() {
+
+    const [openCatalog, setOpenCatalog] = useState(false)
+
     return (
         <header>
             <HeaderTop />
@@ -20,10 +29,47 @@ function Header() {
                     <img src={logo} alt="" />
                 </div>
 
-                <button className="header_katalog">
-                    <FaBars />
+                <button onClick={() => setOpenCatalog(!openCatalog)} className="header_katalog">
+                    {openCatalog ? <FiX /> : <FaBars />}
                     Katalog
                 </button>
+                {/* -------- katalog -------------- */}
+
+                {openCatalog &&
+                    <div className="catalog_wrapper">
+                        {
+                            katalogData.map((katalogItem, index) =>
+                                <div key={index} className='catalog_wrapper_item'>
+                                    {katalogItem.title.icon}
+                                    <p>{katalogItem.title.titleName}</p>
+                                    <FiChevronRight />
+
+                                    <div className="catalog_wrapper_item_section">
+                                        <h2>{katalogItem.title.titleName}</h2>
+                                        <div className="catalog_wrapper_item_section_links">
+                                            {
+                                                katalogItem.collection.map((item, index) =>
+                                                    <div key={index}>
+                                                        <h4>{item.collectionItemName}</h4>
+                                                        <ul>
+                                                            {item.collectionItemLinks.map((link_item, index) =>
+                                                                <li key={index}>
+                                                                    <Link to={"/"}>{link_item}</Link>
+                                                                </li>
+                                                            )}
+                                                        </ul>
+                                                    </div>
+                                                )
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+                            )
+                        }
+
+
+                    </div>}
 
                 <div className="header_searchbar">
                     <input type="search" placeholder='mahsulot izlash' />

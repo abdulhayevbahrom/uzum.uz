@@ -3,7 +3,8 @@ import { FaBlender, FaTshirt, FaHeartbeat, FaBrush } from "react-icons/fa";
 import { GiRunningShoe, GiBasketballBall } from "react-icons/gi";
 import { TbPerfume, TbHorseToy } from "react-icons/tb";
 import { AiTwotoneHome, AiFillCar } from "react-icons/ai";
-import { IoColorPaletteSharp } from "react-icons/io";
+import { IoColorPaletteSharp } from "react-icons/io5";
+
 export const katalogData = [
   {
     title: {
