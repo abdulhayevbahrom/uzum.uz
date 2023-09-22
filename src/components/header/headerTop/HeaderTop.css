@@ -64,6 +64,10 @@ a{
     font-size: var(--font-size);
 }
 
+.savollar-buyurtmalar a:hover{
+color:var(--dar-color);
+}
+
 .language {
   padding: 0 10px;
   display: flex;
