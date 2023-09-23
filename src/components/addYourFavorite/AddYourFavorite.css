@@ -32,6 +32,10 @@
     font-size: 13px;
 }
 
+.padd {
+    padding: 30%;
+}
+
 .add_your_favorite button {
     background: #6E00FF;
     padding: 10px 15px;
