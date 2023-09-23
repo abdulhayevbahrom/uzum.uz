@@ -1,0 +1,147 @@
+.Delivery{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.Delivery .Delivery_item{
+    width: 87%;
+    height: 115vh;
+    background-color: rgb(255, 255, 255);
+    padding: 1% 0 0 0 ;
+}
+
+.Delivery .Delivery_item .item{
+    width: 100%;
+    height: 115vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.Delivery .Delivery_item  p{
+font-size: 28px;
+color: rgba(0, 0, 0, 0.79);
+}
+
+.Delivery .Delivery_item hr{
+    border: .0 5px solid rgba(0, 0, 0, 0.451);
+    margin-top: 20px;
+}
+
+
+
+.Delivery .Delivery_item .item .Delivery_div2{
+    width: 70%;
+    height: 105vh;
+    border: 1px solid rgba(58, 58, 58, 0.288);
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 2% 1.5%;
+}   
+
+.Delivery .Delivery_item .item .Delivery_div1{
+    width: 30%;
+    height: 105vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div1 p{
+    color: rgba(0, 0, 0, 0.729);
+    font-size: 17px;
+    position: fixed;
+    margin-top: 20px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div1 a{
+    color: rgba(0, 0, 0, 0.618);
+    font-size: 13px;
+    text-decoration: none;
+    position: fixed;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 p{
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll{
+    width: 41%;
+    max-height: 85vh;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll p{
+    color: #000000;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li h3{
+    font-size: 1.125rem;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li a{
+    color: black;
+    opacity: .54;
+    text-decoration: none;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li {
+    line-height: 25px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details {
+
+    margin-top: 20px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements{
+    display: flex;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements iframe{
+    width: 61%;
+    height: 45vh;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li .pi{
+    color: rgba(0, 0, 0, 0.514);
+    margin-right: 8px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li .go{
+    color: rgba(0, 0, 0, 0.514);
+    margin-right: 8px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li .md{
+    color: rgba(0, 0, 0, 0.514);
+    margin-right: 8px;
+}
+
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li select{
+    padding: 8px 110px 8px 30px;
+    position: relative;
+    left: 0px;
+    right: 0;
+    bottom: 15px;
+    margin-top: 12px;
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li select option{
+    padding: 8px 110px 8px 30px;
+
+}
+
+.Delivery .Delivery_item .item .Delivery_div2 .elements .scroll .Details ul li select option:hover{
+    background-color: rgba(0, 0, 0, 0.567);
+}

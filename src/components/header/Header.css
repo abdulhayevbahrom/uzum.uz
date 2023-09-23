@@ -23,11 +23,12 @@
 .catalog_wrapper {
     width: 100%;
     min-height: 100vh;
-    background-color: pink;
-    position: fixed;
-    top: 95px;
+    position: absolute;
+    z-index: 10;
+    top: 60px;
     left: 0;
-    padding: 0 3%;
+    padding: 10px 3%;
+    background-color: #fff;
 }
 
 .catalog_wrapper_item {
@@ -35,7 +36,7 @@
     height: 35px;
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 14px 5px;
     transition: .3s;
     border-radius: 3px;
 }
@@ -52,6 +53,8 @@
 
 .catalog_wrapper_item>p {
     flex: 1;
+    font-size: 14px;
+    color: #141415;
 }
 
 .catalog_wrapper_item>svg:last-child {
@@ -60,7 +63,6 @@
 
 .catalog_wrapper_item_section {
     width: calc(100% - 290px);
-    background-color: yellow;
     position: absolute;
     right: 0;
     top: 0;
