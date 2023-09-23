@@ -47,3 +47,9 @@
 .add_your_favorite button:hover {
     background: #6402e5;
 }
+
+@media (max-width:595px) {
+    .add_your_favorite span {
+        text-align: center;
+    }
+}
