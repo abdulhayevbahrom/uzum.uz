@@ -30,7 +30,6 @@ function App() {
     <div className='app'>
       
       <RouterProvider router={router} />
-      <MYswiper/>
     </div>
   )
 }
