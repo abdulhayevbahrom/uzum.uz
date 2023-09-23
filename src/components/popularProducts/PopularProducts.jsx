@@ -3,6 +3,7 @@ import './PopularProducts.css'
 import { PiHeartThin } from 'react-icons/pi'
 import { BsBagPlus } from 'react-icons/bs'
 
+
 const popularProduct = [
   {
     title: "Ommabop mahsulotlar",
