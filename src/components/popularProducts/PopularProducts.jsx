@@ -151,6 +151,7 @@ function PopularProducts() {
   return (
     <div className='popular_products'>
       <h2>Ommabop mahsulotlar</h2>
+      <div></div>
       <div className="scroll">
         {
           popularProduct.map((item, index) => (
