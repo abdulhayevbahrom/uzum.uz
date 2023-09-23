@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './routes/home/Home';
 import Cart from './routes/cart/Cart';
 import Heart from './routes/heart/Heart';
+import Footer from './components/footer/Footer';
 import './App.css'
 
 const router = createBrowserRouter(
