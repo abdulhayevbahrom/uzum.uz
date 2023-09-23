@@ -23,7 +23,8 @@
 .catalog_wrapper {
     width: 100%;
     min-height: 100vh;
-    background-color: pink;
+    /* background-color: pink; */
+    background-color: #fff;
     position: absolute;
     z-index: 10;
     top: 60px;
@@ -63,7 +64,7 @@
 
 .catalog_wrapper_item_section {
     width: calc(100% - 290px);
-    background-color: yellow;
+    /* background-color: yellow; */
     position: absolute;
     right: 0;
     top: 0;
@@ -87,7 +88,8 @@
 
 .catalog_wrapper_item_section_links>div>h4 {
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 25px;
 }
 
 .catalog_wrapper_item_section_links>div>ul {

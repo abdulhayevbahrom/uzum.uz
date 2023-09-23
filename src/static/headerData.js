@@ -120,7 +120,7 @@ export const katalogData = [
     title: {
       icon: <FaBlender />,
       color: "rgb(172,142,226)",
-      titleName: "maishiy texnika",
+      titleName: "Maishiy texnika",
     },
     collection: [
       {

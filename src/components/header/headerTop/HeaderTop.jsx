@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BsGeoAlt } from "react-icons/bs";
 import flag from "../../../assets/flag.png";
 
+
 function HeaderTop() {
   return (
     <div className="header_top">
@@ -16,6 +17,7 @@ function HeaderTop() {
         </button>
         <Link>Topshirish punktlari</Link>
       </div>
+    
       <div className="header-right">
         <div className="savollar-buyurtmalar">
           <Link to={"/savollar"}>Savol-javoblar</Link>
