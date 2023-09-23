@@ -4,6 +4,7 @@ import Home from './routes/home/Home';
 import Cart from './routes/cart/Cart';
 import Heart from './routes/heart/Heart';
 import './App.css'
+import Delivery from './components/Delivery_point/Delivery'
 
 import MYswiper from'./components/swiper/Swiper.jsx'
 
@@ -21,6 +22,11 @@ const router = createBrowserRouter(
       path: "/cart",
       element: <Cart></Cart>,
     },
+    {
+      path: "/delivery",
+      element: <Delivery></Delivery>,
+
+    },
   ]
 );
 
@@ -30,6 +36,7 @@ function App() {
     <div className='app'>
       
       <RouterProvider router={router} />
+
     </div>
   )
 }
