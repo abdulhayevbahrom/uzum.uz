@@ -14,7 +14,7 @@ function HeaderTop() {
             Shahar: <u>Namangan</u>{" "}
           </span>
         </button>
-        <Link>Topshirish punktlari</Link>
+        <Link to={'/delivery'}>Topshirish punktlari</Link>
       </div>
       <div className="header-right">
         <div className="savollar-buyurtmalar">

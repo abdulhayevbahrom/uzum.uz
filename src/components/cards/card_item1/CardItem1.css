@@ -1,24 +1,27 @@
-.CardItem1{
+.CardItem1 {
     width: 100%;
-    height: 70vh;
-    background-color:white;
+    margin: 0 auto;
+    padding: 2% 3%;
+    background-color: #eee;
 }
-.cardtitle h1{
+
+.cardtitle h1 {
     display: flex;
     align-items: center;
     font-size: 20px;
-    margin-left: 130px;
+    /* margin-left: 130px; */
+    margin-bottom: 20px;
     cursor: pointer;
 }
-.cards{
-    width: 80%;
+
+.cards {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5,200px);
-    gap: 10px;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
 }
-.cardItem{
-    width: 200px;
+
+.cardItem {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -28,36 +31,43 @@
     border-radius: 7px;
     position: relative;
     cursor: pointer;
+}
 
+.cardItem:hover {
+    box-shadow: 0px 7px 5px #cac5c5;
 }
-.cardItem:hover{
-    box-shadow: 0px 7px 5px  #cac5c5;
-}
-.cardItem img{
+
+.cardItem img {
     width: 100%;
-    height: 60%;
+    height: 50%;
     transition: .3s;
     margin-bottom: 5px;
+    object-fit: contain;
 }
-.cardItem:hover img{
+
+.cardItem:hover img {
     transform: scale(1.03);
 }
-.cardItem p{
+
+.cardItem p {
     font-size: 10px;
 }
-.cardItem b{
+
+.cardItem b {
     font-size: 10px;
 }
-.cardItem s{
+
+.cardItem s {
     font-size: 7px;
     color: #666;
 }
 
-.sariq{
+.sariq {
     background-color: yellow;
     margin-bottom: 20px;
 }
-.shopicon{
+
+.shopicon {
     position: absolute;
     padding: 5px;
     width: 30px;
@@ -68,22 +78,26 @@
     right: 15px;
     font-size: 15px;
 }
-.heart{
+
+.heart {
     position: absolute;
     right: 10px;
-    top:10px ;
+    top: 10px;
     z-index: 10;
 }
-.heart:hover{
+
+.heart:hover {
     width: 20px;
     height: 20px;
     padding: 1px;
     border-radius: 50%;
-    background-color:#cac5c5;
+    background-color: #cac5c5;
 }
-.cardItem:hover .heart{
-transform: scale(1.1);
+
+.cardItem:hover .heart {
+    transform: scale(1.1);
 }
-.shopicon:hover{
+
+.shopicon:hover {
     background-color: #cac5c5;
 }

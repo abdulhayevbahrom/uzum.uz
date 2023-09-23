@@ -8,66 +8,20 @@ import rasm5 from './images/image_2023-09-23_14-50-18.png'
 import './Swiper.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+let carouselData = [rasm1, rasm2, rasm3, rasm4, rasm5]
+
 const MyCarousel = () => {
     return (
-        <Carousel>
-            <div className='slide'>
-                <img src={rasm1} alt="Image1" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm2} alt="Image2" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm3} alt="Image3" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm4} alt="Image1" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm5} alt="Image2" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm3} alt="Image3" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm1} alt="Image1" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm2} alt="Image2" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm3} alt="Image3" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm1} alt="Image1" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm2} alt="Image2" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm3} alt="Image3" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm4} alt="Image1" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            <div className='slide'>
-                <img src={rasm5} alt="Image2" />
-                {/* <p className="legend">ish jarayonidan rasmlar</p> */}
-            </div>
-            
+        <Carousel autoPlay={true} infiniteLoop={true} interval={2000} >
+            {
+                carouselData.map((img, index) =>
+                    <div className='slide' key={index}>
+                        <img src={img} alt="Image1" />
+                    </div>
+                )
+            }
+
+
         </Carousel>
     );
 };

@@ -22,9 +22,9 @@ function Header() {
     <header>
       <HeaderTop />
       <div className="header_center">
-        <div className="header_logo">
+        <Link to={'/'} className="header_logo">
           <img src={logo} alt="" />
-        </div>
+        </Link>
 
         <button
           onClick={() => setOpenCatalog(!openCatalog)}
@@ -38,7 +38,7 @@ function Header() {
         {openCatalog && (
           <div className="catalog_wrapper">
             {katalogData.map((katalogItem, index) => (
-                <div key={index} className="catalog_wrapper_item">
+              <div key={index} className="catalog_wrapper_item">
                 {katalogItem.title.icon}
                 <p>{katalogItem.title.titleName}</p>
                 <FiChevronRight />
@@ -76,7 +76,7 @@ function Header() {
           Bahromjon
         </Link>
 
-        <Link to={"/user"} className="header_user">
+        <Link to={"/heart"} className="header_user">
           <AiOutlineHeart />
           Sevimlilar
         </Link>
