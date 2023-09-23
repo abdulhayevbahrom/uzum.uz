@@ -7,6 +7,7 @@ import './App.css'
 import Delivery from './components/Delivery_point/Delivery'
 import HomeProducts from './components/homeProducts/HomeProducts';
 import Wishes from './routes/wishes/Wishes';
+import SortedRoutes from './routes/sortedRoutes/SortedRoutes';
 
 const router = createBrowserRouter(
   [
@@ -17,6 +18,10 @@ const router = createBrowserRouter(
     {
       path: "/heart",
       element: <Wishes></Wishes>,
+    },
+    {
+      path: "/sorted",
+      element: <SortedRoutes></SortedRoutes>
     },
     {
       path: "/cart",
