@@ -8,6 +8,7 @@ import flag from "../../../assets/flag.png";
 function HeaderTop() {
   return (
     <div className="header_top">
+      <p className="hidden-header-p">Buyurtmangizni 1 kunda bepul yetkazib beramiz!</p>
       <div className="location-info">
         <button className="header-top-location">
           <BsGeoAlt />
@@ -15,9 +16,9 @@ function HeaderTop() {
             Shahar: <u>Namangan</u>{" "}
           </span>
         </button>
-        <Link>Topshirish punktlari</Link>
+        <Link to={"/delivery"}>Topshirish punktlari</Link>
       </div>
-    
+
       <div className="header-right">
         <div className="savollar-buyurtmalar">
           <Link to={"/savollar"}>Savol-javoblar</Link>

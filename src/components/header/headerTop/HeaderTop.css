@@ -1,5 +1,5 @@
 :root{
-    --dar-color:#141415;
+    --dark-color:#141415;
     --lighter-color:#62656a;
     --font-size:14px;
 }
@@ -7,10 +7,14 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 a{
     text-decoration: none;
+}
+.hidden-header-p{
+  display: none;
 }
 
 .header_top {
@@ -38,14 +42,10 @@ a{
 .location-info button svg {
   font-size: 16px;
 }
-.location-info button span{
-  font-size:var(--font-size);
-  color:var(--dar-color) ;
-}
-
+.location-info button span,
 .location-info a{
-    font-size: var(--font-size);
-    color: var(--dark-color);
+  font-size:var(--font-size);
+  color:var(--dark-color) ;
 }
 
 .header-right{
@@ -65,7 +65,7 @@ a{
 }
 
 .savollar-buyurtmalar a:hover{
-color:var(--dar-color);
+color:var(--dark-color);
 }
 
 .language {
@@ -82,4 +82,22 @@ color:var(--dar-color);
 .flag {
   width: 25px;
   height: 25px;
+}
+
+@media (max-width: 1190px) {
+  .header_top .header-right, .location-info{
+    display: none;
+  }
+ .hidden-header-p{
+  display: block;
+  margin: 0 auto;
+  color: var(--lighter-color);
+  font-size: var(--font-size);
+ }
+}
+@media (max-width: 370px) {
+ .hidden-header-p{
+  text-align: center;
+  font-size: 12px;
+ }
 }

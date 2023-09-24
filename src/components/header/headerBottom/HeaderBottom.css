@@ -1,44 +1,62 @@
-
 .header_bottom {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-bottom-search{
+    display: none;
     width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3%;
-    overflow: hidden;
+}
+.header-bottom-search svg{
+    color: #62656a;
 }
 
-.halol-nasiya{
-    color: #000000;
-    font-size: 12.8px;
-    font-weight: 520;
-    display: flex;
-    gap: 4px;
-    align-items: center;
+.header-bottom-input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding:0 20px;
+    background: none;
 }
 
-.halol-nasiya-logo{
-    width: 24px;
-    height: 24px;
+.halol-nasiya {
+  color: #000000;
+  font-size: 12.8px;
+  font-weight: 520;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
-.yana, .header_bottom a:not(.halol-nasiya){
-    color: #1a1a1ab3;
-    font-size: 14px;
-    font-weight: 400;
-    position: relative;
-    transition: all 0.1s;
-} 
-
-.yana{
-    display: flex;
-    align-items: flex-end;
-    gap: 5px;
+.halol-nasiya-logo {
+  width: 24px;
+  height: 24px;
 }
 
-.yana svg{
-    font-size: 16px;
+.yana,
+.header_bottom a:not(.halol-nasiya) {
+  color: #1a1a1ab3;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.yana {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.yana svg {
+  font-size: 16px;
 }
 
 .header_bottom a:not(.halol-nasiya):after {
@@ -59,6 +77,65 @@
   transform: scaleX(1);
 }
 
-.yana:hover, .header_bottom a:hover{
-    color: #000000;
+.yana:hover,
+.header_bottom a:hover {
+  color: #000000;
 }
+
+.Header-bottom-links {
+  width: 84%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1280px) {
+  
+  .Header-bottom-links a:last-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .Header-bottom-links {
+    padding: 0 7px;
+  }
+  .Header-bottom-links .Qurilish {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Header-bottom-links {
+    padding: 0 7px;
+  }
+  .Header-bottom-links .buyumlar {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Header-bottom-links {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .header_bottom a,.header_bottom button{
+    display: none;
+  }
+  .header-bottom-search{
+    /* transform: translateX(-50%); */
+    width: 94%;
+    height: 100%;
+    display: block;
+    background: #76797F1A;
+    padding:0 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 3%;
+  }
+}
+

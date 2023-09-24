@@ -12,18 +12,23 @@ import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { FiX } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
-
 import { katalogData } from "../../static/headerData";
-
+import {HiBars3} from 'react-icons/hi2'
+import Sidebar from "./Sidebar/Sidebar";
 function Header() {
   const [openCatalog, setOpenCatalog] = useState(false);
+ 
+
 
   return (
     <header>
       <HeaderTop />
       <div className="header_center">
-        <div className="header_logo">
-          <img src={logo} alt="" />
+        <div className="header-logo-icon">
+          <HiBars3 className="open-sidebar" />
+          <Link to={"/"} className="header_logo">
+            <img src={logo} alt="" />
+          </Link>
         </div>
 
         <button
@@ -38,7 +43,7 @@ function Header() {
         {openCatalog && (
           <div className="catalog_wrapper">
             {katalogData.map((katalogItem, index) => (
-                <div key={index} className="catalog_wrapper_item">
+              <div key={index} className="catalog_wrapper_item">
                 {katalogItem.title.icon}
                 <p>{katalogItem.title.titleName}</p>
                 <FiChevronRight />
@@ -71,22 +76,25 @@ function Header() {
           </button>
         </div>
 
-        <Link to={"/user"} className="header_user">
-          <BiUser />
-          Bahromjon
-        </Link>
+        <div className="header-3links">
+          <Link to={"/user"} className="header_user">
+            <BiUser />
+            <span>Bahromjon</span>
+          </Link>
 
-        <Link to={"/user"} className="header_user">
-          <AiOutlineHeart />
-          Sevimlilar
-        </Link>
+          <Link to={"/heart"} className="header_user">
+            <AiOutlineHeart />
+            <span>Sevimlilar</span>
+          </Link>
 
-        <Link to={"/user"} className="header_user">
-          <BsCart />
-          Savat
-        </Link>
+          <Link to={"/user"} className="header_user">
+            <BsCart />
+            <span>Savat</span>
+          </Link>
+        </div>
       </div>
       <HeaderBottom />
+      {/* <Sidebar /> */}
     </header>
   );
 }
