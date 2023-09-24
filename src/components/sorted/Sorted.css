@@ -1,0 +1,152 @@
+.sorted {
+    padding:  3%;
+    width: 100%;
+}
+
+.sorted_my_wishes_card  {
+    width: 100%;
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+    
+}
+.sorted_my_wishes_card .my_wishes_card_text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sorted_my_wishes_card .my_wishes_card_text span {
+    font-weight: 600;
+    font-size: 22px;
+    color: #212121;
+}
+
+.sorted_my_wishes_card .my_wishes_card_select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sorted_my_wishes_card .my_wishes_card_select .select_card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.sorted_my_wishes_card .my_wishes_card_select .select_card span {
+    font-size: 13px;
+    color: #77797E;
+}
+
+.sorted_my_wishes_card .my_wishes_card_select .select_card .form-select {
+    height: 35px;
+    width: 210px;
+    padding-left: 3px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-color: #9ea2aa;
+    border-radius: 5px;
+}
+
+.sorted_my_wishes_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 1% 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.scrool_bar .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    gap: 10px;
+    width: 265px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 10px 1px #d5d9e2;
+}
+
+.scrool_bar .cart .top_cart {
+    width: 90%;
+    height: 40vh;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrool_bar .cart .top_cart img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.scrool_bar .cart .top_cart img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.scrool_bar .cart .top_cart .icon_heart {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.scrool_bar .cart .top_cart .icon_heart svg {
+    color:#555;
+    font-size: 18px;
+    gap: 300px;
+    color: red;
+}
+
+.scrool_bar .cart .bottom_cart_data {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scrool_bar .cart .bottom_cart_data span {
+    font-size: 15px;
+    padding-right: 10px;
+    font-weight: 100;
+    color: #2b2b2b;
+}
+
+.scrool_bar .cart .bottom_cart_data .card_price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+}
+
+.scrool_bar .cart .bottom_cart_data .card_price .left_price s {
+    font-size: 12px;
+    color: #424242;
+}
+
+.scrool_bar .cart .bottom_cart_data .card_price .left_price p {
+    color: #222;
+}
+
+
+.scrool_bar .cart .bottom_cart_data .card_price .right_icon_shop {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #505050;
+}
