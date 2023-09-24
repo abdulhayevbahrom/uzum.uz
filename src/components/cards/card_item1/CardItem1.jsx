@@ -1,11 +1,15 @@
 import React from 'react'
 import './CardItem1.css'
 import { TbShoppingBagPlus } from 'react-icons/tb'
-import { AiOutlineHeart, AiOutlineRight } from 'react-icons/ai'
+import { AiFillHeart, AiOutlineHeart, AiOutlineRight } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { Add_To_Heart } from '../../../redux/addToHeart'
 
 function CardItem1({ data, componentName }) {
+  const dispatch = useDispatch()
+  const heartData = useSelector(s => s.addToHeart).map(i => i.id)
+
   return (
     <div className='CardItem1'>
       <div className="cardtitle">
@@ -14,7 +18,14 @@ function CardItem1({ data, componentName }) {
       <div className="cards">
         {data?.slice(0, 10)?.map((item, index) => (
           <div key={index} className="cardItem">
-            <AiOutlineHeart className='heart' />
+
+            {
+              heartData.some(i => i === item.id) ?
+                <AiFillHeart className='heart' onClick={() => dispatch(Add_To_Heart({ pro: item }))} />
+                :
+                <AiOutlineHeart className='heart' onClick={() => dispatch(Add_To_Heart({ pro: item }))} />
+            }
+
             <Link to={`/single-page/${item.id}`}>
               <img src={item.image} alt="" />
             </Link>

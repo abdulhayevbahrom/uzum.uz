@@ -10,37 +10,40 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { useState } from "react";
-import { FiX } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+import { FiX, FiChevronRight } from "react-icons/fi";
 import { katalogData } from "../../static/headerData";
-import {HiBars3} from 'react-icons/hi2'
+import { HiBars3 } from 'react-icons/hi2'
 import Sidebar from "./Sidebar/Sidebar";
-function Header() {
-  const [openCatalog, setOpenCatalog] = useState(false);
- 
+import { useDispatch, useSelector } from "react-redux";
+import { OPEN_CATALOG } from "../../redux/katalog";
 
+function Header() {
+  const dispatch = useDispatch()
+  const catalogState = useSelector(s => s.katalog)
+  const [openSidebar, setOpenSidebar] = useState(false)
 
   return (
     <header>
       <HeaderTop />
       <div className="header_center">
+        {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
         <div className="header-logo-icon">
-          <HiBars3 className="open-sidebar" />
+          <HiBars3 onClick={() => setOpenSidebar(!openSidebar)} className="open-sidebar" />
           <Link to={"/"} className="header_logo">
             <img src={logo} alt="" />
           </Link>
         </div>
 
         <button
-          onClick={() => setOpenCatalog(!openCatalog)}
+          onClick={() => dispatch(OPEN_CATALOG())}
           className="header_katalog"
         >
-          {openCatalog ? <FiX /> : <FaBars />}
+          {catalogState ? <FiX /> : <FaBars />}
           Katalog
         </button>
         {/* -------- katalog -------------- */}
 
-        {openCatalog && (
+        {catalogState && (
           <div className="catalog_wrapper">
             {katalogData.map((katalogItem, index) => (
               <div key={index} className="catalog_wrapper_item">

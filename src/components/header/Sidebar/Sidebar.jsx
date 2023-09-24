@@ -4,11 +4,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BasicExample from "./HeaderAccordion";
 
-function Sidebar() {
+function Sidebar({ setOpenSidebar }) {
   return (
     <div className="Sidebar">
       <div className="sidebar-top">
-        <AiOutlineClose />
+        <AiOutlineClose onClick={() => setOpenSidebar(false)} />
         <div className="sidebar-top-register">
           <Link>Kirish</Link>/ <Link>Ro'yxatdan o'tish</Link>
         </div>

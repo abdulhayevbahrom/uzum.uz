@@ -14,7 +14,6 @@ export const addToCart = createSlice({
                     inx === index ? { ...item, quantity: item.quantity + 1 } : item
                 )
             }
-
         }
     }
 })

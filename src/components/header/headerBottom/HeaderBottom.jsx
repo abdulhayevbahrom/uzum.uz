@@ -5,7 +5,13 @@ import halol from "../../../assets/halol nasiya-logo.png";
 import { FiChevronDown } from "react-icons/fi";
 import { GoSearch } from "react-icons/go";
 // import Sidebar from "../MediaNav/Sidebar";
+import { useDispatch } from "react-redux";
+import { OPEN_CATALOG } from "../../../redux/katalog";
+
+
 function HeaderBottom() {
+  const dispatch = useDispatch()
+
   return (
     <div className="header_bottom">
       <div className="header-bottom-search">
@@ -40,7 +46,7 @@ function HeaderBottom() {
         </Link>
         <Link to={"/"}>Avtotovarlar</Link>
       </div>
-      <button className="yana">
+      <button className="yana" onClick={() => dispatch(OPEN_CATALOG())}>
         Yana <FiChevronDown />
       </button>
       {/* <Sidebar /> */}
