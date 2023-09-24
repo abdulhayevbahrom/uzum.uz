@@ -152,3 +152,37 @@
     border: 1px solid #505050;
     cursor: pointer;
 }
+
+@media (max-width:1336px) {
+    .sorted_my_wishes_container .scrool_bar .cart {
+        height: 450px;
+    }
+    .sorted_my_wishes_container .scrool_bar .cart .top_cart a img {
+        object-fit: contain;
+    }
+    .sorted_my_wishes_container .scrool_bar .cart .bottom_cart_data {
+        gap: 25px;
+    }
+}
+
+@media (max-width:675px) {
+    .sorted_my_wishes_card .my_wishes_card_select {
+        justify-content: flex-start;
+    }
+    .sorted_my_wishes_card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width:400px) {
+    .sorted_my_wishes_card .my_wishes_card_select .select_card .form-select {
+        width: 150px;
+        height: 27px;
+        font-size: 13px;
+    }
+    .sorted_my_wishes_card .my_wishes_card_text span {
+        font-size: 19px;
+    }
+}
