@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './routes/home/Home';
 import Cart from './routes/cart/Cart';
 import Heart from './routes/heart/Heart';
+import Wishes from './routes/wishes/Wishes'
 import './App.css'
 import Delivery from './components/Delivery_point/Delivery'
 import HomeProducts from './components/homeProducts/HomeProducts';
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       element: <Cart></Cart>,
     },
     {
+<<<<<<< HEAD
       path: "/delivery",
       element: <Delivery></Delivery>,
     },
@@ -30,6 +32,11 @@ const router = createBrowserRouter(
       path: "/single-page/:1",
       element: <HomeProducts></HomeProducts>,
     },
+=======
+      path: "/wishes",
+      element: <Wishes></Wishes>
+    }
+>>>>>>> origin/branch
   ]
 );
 

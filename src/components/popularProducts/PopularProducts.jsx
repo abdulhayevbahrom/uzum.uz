@@ -152,7 +152,7 @@ function PopularProducts() {
   return (
     <div className='popular_products'>
       <h2>Ommabop mahsulotlar</h2>
-      <div></div>
+      <div className='ddd'></div>
       <div className="scroll">
         {
           popularProduct.map((item, index) => (
@@ -165,7 +165,7 @@ function PopularProducts() {
                   </div>
                 </div>
                 <div className="bottom_cart_data">
-                  <span>{item.data.slice(0 , 29) + " ..."} </span>
+                  <span>{item.data.slice(0, 29) + " ..."} </span>
                   <div className="card_price">
                     <div className="left_price">
                       <s>{item.price + " so'm"}</s>
