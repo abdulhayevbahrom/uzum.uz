@@ -20,7 +20,7 @@
     padding: 5px 3%;
     display: flex;
     overflow-y: auto;
-    /* gap: 15px; */
+    margin-bottom: 80px;
 }
 
 .scroll::-webkit-scrollbar  {
@@ -61,12 +61,17 @@
     position: absolute;
     right: 10px;
     top: 7px;
+    cursor: pointer;
 }
 
 .scroll .scrool_bar .cart .top_cart .icon_heart svg {
     color:#555;
-    font-size: 18px;
+    font-size: 19px;
     gap: 300px;
+} 
+.scroll .scrool_bar .cart .top_cart .icon_heart .heart_red {
+    color: red;
+    font-size: 17px;
 }
 
 .scroll .scrool_bar .cart .bottom_cart_data {

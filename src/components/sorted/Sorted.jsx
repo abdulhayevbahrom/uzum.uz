@@ -3,76 +3,87 @@ import './Sorted.css'
 import { PiHeartThin } from 'react-icons/pi'
 import {BsBagPlus} from 'react-icons/bs'
 import {BsHeartFill} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 const popularProduct = [
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/cjutr5kjvf2hdh3fato0/t_product_540_high.jpg#1695437646607",
         icons: <PiHeartThin />,
         data: "Futbolka yozuvli erkaklar uchun, unisex",
-        price: "29 000"
+        price: "29 000",
+        id: '1'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/ce3fe32vtie1lhbefh1g/t_product_540_high.jpg#1695449497816",
         icons: <PiHeartThin />,
         data: "Masofadan boshqariladigan o'yinchoq samalyot",
-        price: "57 000"
+        price: "57 000",
+        id: '2'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/ck014q4jvf2qegt3btd0/t_product_540_high.jpg#1695455774221",
         icons: <PiHeartThin />,
         data: "Idish yuvish suyuqligi Fairy Lotion, aloe vera aromati va E vitamini bilan",
-        price: "15 000"
+        price: "15 000",
+        id: '3'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/cammvre3p3gj5u389pc0/t_product_540_high.jpg#1695456908675",
         icons: <PiHeartThin />,
         data: "Choynak Kukmara zanglamaydigan po'latdan, hushtak bilan, 3 litr",
-        price: "124 000"
+        price: "124 000",
+        id: '4'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/cdqld48v1htd23ai43eg/t_product_540_high.jpg#1695457182232",
         icons: <PiHeartThin />,
         data: "Futbolka Selfie print bilan",
-        price: "79 000"
+        price: "79 000",
+        id: '5'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/cdibqpf0tgqvlm59b1v0/t_product_540_high.jpg#1695457773345",
         icons: <PiHeartThin />,
         data: "Ofis qog'oz Svetotopy ECO, A4f, 80g/m2, 500 varaq",
-        price: "38 000"
+        price: "38 000",
+        id: '6'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/ccgataf0tgqvlm57e3tg/t_product_540_high.jpg#1695457802514",
         icons: <PiHeartThin />,
         data: "Quti aksessuarlar va zargarlik buyumlari uchun",
-        price: "51 000"
+        price: "51 000",
+        id: '7'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/ccolojf0tgqvlm57jrqg/t_product_540_high.jpg#1695457856352",
         icons: <PiHeartThin />,
         data: "Simsiz quloqchinlar TWS i12, Bluetooth 5.0",
-        price: "64 000"
+        price: "64 000",
+        id: '8'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/cc9l266ha888i5ell7qg/t_product_540_high.jpg#1695457915104",
         icons: <PiHeartThin />,
         data: "Oshxona, hammom va uyni yuvish uchun tutqichli uy cho'tkasi",
-        price: "19 000"
+        price: "19 000",
+        id: '9'
     },
     {
         title: "Ommabop mahsulotlar",
         img: "https://images.uzum.uz/ce7l7p0l08kcldtoe70g/original.jpg",
         icons: <PiHeartThin />,
         data: "Trimmer Professional soch olish mashinkasi VGR V-107",
-        price: "289 000"
+        price: "289 000",
+        id: '10'
     },
 ]
 
@@ -105,9 +116,8 @@ function Sorted() {
                         <div className="scrool_bar" key={index}>
                             <div className="cart">
                                 <div className="top_cart">
-                                    <img src={item.img} alt={item.data} />
+                                    <Link to={`/single-page/${item.id}`}><img src={item.img} alt={item.data} /></Link>
                                     <div className="icon_heart">
-                                        {/* {item.icons} */}
                                         <BsHeartFill/>
                                     </div>
                                 </div>
