@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './AddYourFavorite.css'
 import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import 'aos/dist/aos.css'
 
 function AddYourFavorite() {
 
   const [addYourFovarite, setAddYourFovarite] = useState(false)
-
+  
 
   return (
     <div className='add_your_favorite'>
@@ -18,7 +19,7 @@ function AddYourFavorite() {
       <button onClick={() => setAddYourFovarite(!addYourFovarite)}>Akkauntga kirish</button>
       {addYourFovarite && (
         <div className="add_acount">
-          <div className="acoun_cart">
+          <div className="acoun_cart" >
             <button onClick={() => setAddYourFovarite(!addYourFovarite)} className='add_acount_none'>
               <FiX className='add_acount_none_x' />
             </button>
@@ -33,5 +34,6 @@ function AddYourFavorite() {
     </div>
   )
 }
+
 
 export default AddYourFavorite

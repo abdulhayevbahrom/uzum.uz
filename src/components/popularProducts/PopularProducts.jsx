@@ -184,7 +184,7 @@ function PopularProducts() {
                   <Link to={`/single-page/${item.id}`}><img src={item.img} alt={item.data} /></Link>
                   <div className="icon_heart">
                     <button onClick={()=> setAddatHeart(!addatHeart)}>
-                      {addatHeart ? <PiHeartThin/> :  <BsHeartFill className='heart_red'/>}
+                      {addatHeart ? <BsHeartFill className='heart_red'/> : <PiHeartThin/>  }
                     </button>
                   </div>
                 </div>
