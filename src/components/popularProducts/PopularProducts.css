@@ -34,6 +34,9 @@
     flex-direction: column;
     gap: 10px;
     width: 265px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll .scrool_bar .cart .top_cart {
@@ -50,6 +53,7 @@
     width: 100%;
     height: 100%;
     transition: .3s;
+    border-radius: 15px;
 }
 
 .scroll .scrool_bar .cart .top_cart img:hover {
@@ -78,11 +82,11 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 90%;
 }
 
 .scroll .scrool_bar .cart .bottom_cart_data span {
     font-size: 15px;
-    padding-right: 10px;
     font-weight: 100;
     color: #2b2b2b;
 }
@@ -91,12 +95,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 25px;
+    width: 100%;
+    padding: 15px 0;
 }
 
 .scroll .scrool_bar .cart .bottom_cart_data .card_price .left_price s {
     font-size: 12px;
     color: #424242;
+    background: #fdfa4b;
+    color: #f926dd;
 }
 
 .scroll .scrool_bar .cart .bottom_cart_data .card_price .left_price p {
