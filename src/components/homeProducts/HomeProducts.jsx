@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{} from 'react'
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
