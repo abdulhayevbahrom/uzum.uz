@@ -1,14 +1,33 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { Link, NavLink } from "react-router-dom";
+import {Routes, Route} from "react-router-dom"
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
-import Header from '../header/Header'
+import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
+// import Tarkib from './tarkib/Tarkib';
+// import Olchamm from './olchamm/Olchamm';
+// import Korsatma from './korsatma/Korsatma';
+// import Tavsif from './tavsif/Tavsif';
+// import Header from '../header/Header'    
 
 function HomeProducts() {
+    let prices = 29000
+    const [count , setcount] = useState(1)
+    function minus(){
+        setcount(count -1)
+    }
+    function plus() {
+    setcount(count +1)
+   }
+
+   let price = prices * count 
+
+
     return (
         <div>
 
-            <Header />
+            {/* <Header /> */}
             <div className='homeproducts'>
                 <div className="homeproducts_boxs">
                     <div className="homeproducts_boxs_left">
@@ -81,15 +100,15 @@ function HomeProducts() {
                         <p>Miqdori:</p>
                         <div className="homeproducts_boxs_right_header_text_products_miqdori">
                             <div className="homeproducts_boxs_right_header_text_products_miqdori_1">
-                                <h2>-</h2>
-                                <h3>1</h3>
-                                <h2>+</h2>
+                                <button onClick={minus}><AiOutlineMinus className='AiOutlineMinus' /></button>
+                                <h3>{count}</h3>
+                                <button onClick={plus}><AiOutlinePlus className='AiOutlineMinus' /></button>
                             </div>
                             <p>Sotuvda 2183 dona bor</p>
                         </div>
                         <p className='display_none_p'>Narx:</p>
                         <div className='homeproducts_boxs_right_header_text_products_prices'>
-                            <h2>29 000</h2>
+                            <h2>{price}</h2>
                             <s>89 000</s>
                             <i>Tug’ilgan kun</i>
                         </div>
@@ -104,6 +123,23 @@ function HomeProducts() {
                             <p><SlBasket />  Bu haftada <span>134</span> kishi sotib oldi</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="sharx_page">
+                <div className="sharx_page_header1">
+                    <div className="sharx_page_header1_items">
+                        <NavLink to={"/tavsifi"}>Mahsulot tavsifi</NavLink>
+                        <NavLink to={"/korsatma"}>Ko'rsatma</NavLink>
+                        <NavLink to={"/olchamlar"}>O'lchamlar</NavLink>
+                        <NavLink to={"/tarkib"}>Tarkib</NavLink>
+                        <NavLink to={"/sharhlar"}>Sharhlar(1)</NavLink>
+                    </div>
+                </div>
+                <div className="sharx_page_banner_pagess">
+                   {/* <Tavsif/> */}
+                   {/* <Korsatma/> */}
+                   {/* <Olchamm/> */}
+                   {/* <Tarkib/> */}
                 </div>
             </div>
         </div>

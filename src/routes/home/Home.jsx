@@ -21,7 +21,7 @@ function Home() {
     return (
         <div className='home'>
             <Header />
-            {/* <HomeProducts /> */}
+            <HomeProducts />
             <MYswiper />
             <CardItem1 componentName={"Tugulgan kun"} data={product} />
             <CardItem1 componentName={"Elektronika"} data={product} />
