@@ -56,7 +56,7 @@ function AddYourFavorite() {
           </div>
         </div>
       )}
-    </motion.div>
+    </.div>
   )
 }
 
