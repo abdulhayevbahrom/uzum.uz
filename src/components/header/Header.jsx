@@ -102,10 +102,19 @@ function Header() {
             <span>Bahromjon</span>
           </Link>
 
+<<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
             <AiOutlineHeart />
             <span>Sevimlilar</span>
           </Link>
+=======
+        <Link to={"/heart"} className="header_user">
+          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
+          
+          <AiOutlineHeart />
+          Sevimlilar
+        </Link>
+>>>>>>> origin/msoleh01
 
           <Link to={"/user"} className="header_user">
             <BsCart />
