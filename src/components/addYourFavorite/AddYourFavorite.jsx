@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {  memo, useState } from 'react'
 import './AddYourFavorite.css'
 import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import 'aos/dist/aos.css'
 
 function AddYourFavorite() {
+  document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"
 
   const [addYourFovarite, setAddYourFovarite] = useState(false)
   
@@ -38,4 +39,4 @@ function AddYourFavorite() {
 }
 
 
-export default AddYourFavorite
+export default memo(AddYourFavorite)

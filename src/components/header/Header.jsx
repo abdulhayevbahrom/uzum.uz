@@ -77,6 +77,8 @@ function Header() {
         </Link>
 
         <Link to={"/heart"} className="header_user">
+          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
+          
           <AiOutlineHeart />
           Sevimlilar
         </Link>
