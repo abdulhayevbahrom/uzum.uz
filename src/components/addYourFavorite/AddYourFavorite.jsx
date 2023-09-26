@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import React, { memo, useState} from 'react'
+import React, { memo, useState } from 'react'
 import './AddYourFavorite.css'
 import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,7 @@ const textAnimation = {
   visible: custom => ({
     x: 0,
     opacity: 1,
-    transition: {delay: custom * .2}
+    transition: { delay: custom * .2 }
   })
 }
 
@@ -28,7 +28,7 @@ function AddYourFavorite() {
 
   return (
     <motion.div
-      initial="hidden" 
+      initial="hidden"
       whileInView="visible"
       className='add_your_favorite'
     >
@@ -40,8 +40,8 @@ function AddYourFavorite() {
       <motion.button custom={4} variants={textAnimation} onClick={() => setAddYourFovarite(!addYourFovarite, document.body.style.overflow = "hidden")}>
         Akkauntga kirish
       </motion.button>
-     {addYourFovarite &&(
-        <div 
+      {addYourFovarite && (
+        <div
           className="add_acount"
         >
           <div className="acoun_cart" >
