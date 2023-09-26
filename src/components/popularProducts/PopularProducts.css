@@ -27,7 +27,10 @@
     display: none;
 }
 
-
+.padd {
+    padding: 0 3%;
+    padding: 0 4%;
+}
 
 .scroll .scrool_bar .cart {
     display: flex;
