@@ -16,11 +16,13 @@ function AddYourFavorite() {
       </div>
       <h2>Sizga yoqqanini qoʻshing</h2>
       <span>Mahsulotdagi ♡ belgisini bosing. Akkauntga kiring va barcha saralanganlar saqlanib qoladi</span>
-      <button onClick={() => setAddYourFovarite(!addYourFovarite)}>Akkauntga kirish</button>
-      {addYourFovarite && (
+      <button onClick={() => setAddYourFovarite(!addYourFovarite , document.body.style.overflow = "hidden")}>
+        Akkauntga kirish
+      </button>
+      {addYourFovarite && (  
         <div className="add_acount">
           <div className="acoun_cart" >
-            <button onClick={() => setAddYourFovarite(!addYourFovarite)} className='add_acount_none'>
+            <button onClick={() => setAddYourFovarite(!addYourFovarite , document.body.style.overflowY = "auto")} className='add_acount_none'>
               <FiX className='add_acount_none_x' />
             </button>
             <h2>Telefon raqamini kiriting</h2>
