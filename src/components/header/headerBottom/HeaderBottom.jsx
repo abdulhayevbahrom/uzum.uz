@@ -8,9 +8,14 @@ import { GoSearch } from "react-icons/go";
 import { useDispatch } from "react-redux";
 import { OPEN_CATALOG } from "../../../redux/katalog";
 
+<<<<<<< HEAD
 
 function HeaderBottom() {
   const dispatch = useDispatch()
+=======
+function HeaderBottom() {
+  const dispatch = useDispatch();
+>>>>>>> origin/Gulnoza
 
   return (
     <div className="header_bottom">
