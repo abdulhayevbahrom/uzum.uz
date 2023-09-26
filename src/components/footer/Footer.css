@@ -10,21 +10,51 @@
 .footer_container{
     width: 90%;
     height: 37vh;
-    background-color: #fff;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    display: none;
 }
 
 .footer_container .footer_col{
     width: 24%;
     height: 35vh;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
-.footer_container .footer_colh4{
+.footer_container .footer_col h4{
+    margin-top: 20px;
     color: #1F1f26;
+}
+
+.footer_container .footer_col .container_item{
+    display: flex;
+}
+
+.footer_container .footer_col .app_store{
+    display: flex;
+}
+
+.footer_container .footer_col .app_store {
+    display: flex;
+}
+
+.footer_container .footer_col .app_store img{
+    width: 30px;
+    height: 25px;
+    margin-top: 7px;
+}
+
+.footer_container .footer_col .google_play {
+    display: flex;
+}
+
+.footer_container .footer_col .google_play .img{
+    width: 30px;
+    height: 25px;
+    margin-top: 7px;
 }
 
 .footer_container .footer_col a{
@@ -32,4 +62,23 @@
     display: flex;
     line-height: 40px;
     color: #4D4e59;
+}
+
+.footer_container .footer_col .social {
+    display: flex;
+}
+
+
+.footer_container .footer_col .social  img{
+    width: 50px;
+    height: 50px;
+}
+
+/* ------------------------------------------------- */
+
+@media screen and (max-width:1100px) {
+.footer_container .footer_col .google_play, 
+.footer_container .footer_col .app_store {
+    font-size: 15px;
+}
 }
