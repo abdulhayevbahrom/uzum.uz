@@ -1,25 +1,7 @@
-import { motion } from 'framer-motion'
-
 import React, { memo, useState } from 'react'
 import './AddYourFavorite.css'
 import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-
-
-const textAnimation = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: custom => ({
-    x: 0,
-    opacity: 1,
-    transition: { delay: custom * .2 }
-  })
-}
-
-
-
 
 
 function AddYourFavorite() {
@@ -27,23 +9,17 @@ function AddYourFavorite() {
   const [addYourFovarite, setAddYourFovarite] = useState(false)
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      className='add_your_favorite'
-    >
-      <motion.div custom={1} variants={textAnimation} className="img_border">
+    <div className='add_your_favorite'>
+      <div className="img_border">
         <img src="https://uzum.uz/static/img/hearts.cf414be.png" alt="" />
-      </motion.div>
-      <motion.h2 custom={2} variants={textAnimation}>Sizga yoqqanini qoʻshing</motion.h2>
-      <motion.span custom={3} variants={textAnimation}>Mahsulotdagi ♡ belgisini bosing. Akkauntga kiring va barcha saralanganlar saqlanib qoladi</motion.span>
-      <motion.button custom={4} variants={textAnimation} onClick={() => setAddYourFovarite(!addYourFovarite, document.body.style.overflow = "hidden")}>
+      </div>
+      <h2 >Sizga yoqqanini qoʻshing</h2>
+      <span>Mahsulotdagi ♡ belgisini bosing. Akkauntga kiring va barcha saralanganlar saqlanib qoladi</span>
+      <button onClick={() => setAddYourFovarite(!addYourFovarite, document.body.style.overflow = "hidden")}>
         Akkauntga kirish
-      </motion.button>
+      </button>
       {addYourFovarite && (
-        <div
-          className="add_acount"
-        >
+        <div className="add_acount">
           <div className="acoun_cart" >
             <button onClick={() => setAddYourFovarite(!addYourFovarite, document.body.style.overflowY = "auto")} className='add_acount_none'>
               <FiX className='add_acount_none_x' />
@@ -56,7 +32,7 @@ function AddYourFavorite() {
           </div>
         </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 
