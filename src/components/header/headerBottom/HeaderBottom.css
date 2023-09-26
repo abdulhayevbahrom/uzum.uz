@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+
 .header_bottom {
   width: 100%;
   height: 40px;
@@ -9,21 +11,22 @@
   position: relative;
 }
 
-.header-bottom-search{
-    display: none;
-    width: 100%;
+.header-bottom-search {
+  display: none;
+  width: 100%;
 }
-.header-bottom-search svg{
-    color: #62656a;
+.header-bottom-search svg {
+  color: #62656a;
 }
 
-.header-bottom-input{
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    padding:0 20px;
-    background: none;
+.header-bottom-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  background: none;
+  font-family: "Inter", sans-serif;
 }
 
 .halol-nasiya {
@@ -33,6 +36,7 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  font-family: "Inter", sans-serif;
 }
 
 .halol-nasiya-logo {
@@ -47,6 +51,7 @@
   font-weight: 400;
   position: relative;
   transition: all 0.1s;
+  font-family: "Inter", sans-serif;
 }
 
 .yana {
@@ -89,7 +94,6 @@
 }
 
 @media (max-width: 1280px) {
-  
   .Header-bottom-links a:last-of-type {
     display: none;
   }
@@ -119,17 +123,17 @@
   }
 }
 
-@media (max-width: 1190px) {
-  .header_bottom a,.header_bottom button{
+@media (max-width: 950px) {
+  .header_bottom a,
+  .header_bottom button {
     display: none;
   }
-  .header-bottom-search{
-    /* transform: translateX(-50%); */
+  .header-bottom-search {
     width: 94%;
     height: 100%;
     display: block;
-    background: #76797F1A;
-    padding:0 25px;
+    background: #76797f1a;
+    padding: 0 25px;
     display: flex;
     align-items: center;
     border-radius: 6px;
@@ -138,4 +142,5 @@
     left: 3%;
   }
 }
+
 
