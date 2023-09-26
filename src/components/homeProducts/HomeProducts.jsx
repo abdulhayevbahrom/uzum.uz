@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React,{useState} from 'react'
 import { Link, NavLink } from "react-router-dom";
 import {Routes, Route} from "react-router-dom"
+=======
+import React,{} from 'react'
+>>>>>>> origin/umarxon
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
