@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import React, { memo, useState , forwardRef} from 'react'
+import React, { memo, useState} from 'react'
 import './AddYourFavorite.css'
 import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
