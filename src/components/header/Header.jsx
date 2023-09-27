@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import HeaderTop from "./headerTop/HeaderTop";
@@ -12,25 +11,17 @@ import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { FiX, FiChevronRight } from "react-icons/fi";
 import { katalogData } from "../../static/headerData";
-<<<<<<< HEAD
-import { HiBars3 } from 'react-icons/hi2'
-=======
 import { HiBars3 } from "react-icons/hi2";
->>>>>>> origin/Gulnoza
 import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
-
+import RegisterForm from "../Register/Register";
 function Header() {
-<<<<<<< HEAD
-  const dispatch = useDispatch()
-  const catalogState = useSelector(s => s.katalog)
-  const [openSidebar, setOpenSidebar] = useState(false)
-=======
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
->>>>>>> origin/Gulnoza
+  const [openRegister, setOpenRegister] = useState(false);
+  let ism = JSON.parse(localStorage.getItem("user"))?.name;
 
   return (
     <header>
@@ -38,14 +29,10 @@ function Header() {
       <div className="header_center">
         {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
         <div className="header-logo-icon">
-<<<<<<< HEAD
-          <HiBars3 onClick={() => setOpenSidebar(!openSidebar)} className="open-sidebar" />
-=======
           <HiBars3
             onClick={() => setOpenSidebar(!openSidebar)}
             className="open-sidebar"
           />
->>>>>>> origin/Gulnoza
           <Link to={"/"} className="header_logo">
             <img src={logo} alt="" />
           </Link>
@@ -95,30 +82,24 @@ function Header() {
             <GoSearch />
           </button>
         </div>
-
+        {openRegister && <RegisterForm setOpenRegister={setOpenRegister} />}
         <div className="header-3links">
-          <Link to={"/user"} className="header_user">
-            <BiUser />
-            <span>Bahromjon</span>
-          </Link>
+          <button
+            onClick={() => setOpenRegister(!openRegister)}
+            className="header_user"
+          >
+            <BiUser/>
+            <span className="header-user-text">{ism ? ism : "Kirish"}</span>
+          </button>
 
-<<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
             <AiOutlineHeart />
-            <span>Sevimlilar</span>
+            <span className="header-user-text">Sevimlilar</span>
           </Link>
-=======
-        <Link to={"/heart"} className="header_user">
-          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
-          
-          <AiOutlineHeart />
-          Sevimlilar
-        </Link>
->>>>>>> origin/msoleh01
 
           <Link to={"/user"} className="header_user">
             <BsCart />
-            <span>Savat</span>
+            <span className="header-user-text">Savat</span>
           </Link>
         </div>
       </div>

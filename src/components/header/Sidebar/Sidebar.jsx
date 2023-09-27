@@ -7,19 +7,33 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import BasicExample from "./HeaderAccordion";
-import { BsBagCheck } from "react-icons/bs";
-import { BsGeoAlt, BsEnvelope } from "react-icons/bs";
+import { BsGeoAlt, BsEnvelope, BsBagCheck } from "react-icons/bs";
 import flag from "../../../assets/flag.png";
 import { AccordionSidebarLinks } from "./HeaderAccordion";
 import { TbBookDownload, TbMap } from "react-icons/tb";
+import { BiUser } from "react-icons/bi";
 
 function Sidebar({ setOpenSidebar }) {
+  let userdata = JSON.parse(localStorage.getItem("user"));
+  function handlerLogout() {
+    window.confirm("Do you really want to log out?") &&
+      localStorage.removeItem("user");
+    setOpenSidebar(false);
+  }
   return (
     <div className="Sidebar">
       <div className="sidebar-top">
         <AiOutlineClose onClick={() => setOpenSidebar(false)} />
         <div className="sidebar-top-register">
-          <Link>Kirish</Link> / <Link>Ro'yxatdan o'tish</Link>
+          {userdata ? (
+            <div className="profil">
+              <BiUser /> <span>{userdata.name}</span>
+            </div>
+          ) : (
+            <div className="sidebar-top-register">
+              <Link>Kirish</Link> / <Link>Ro'yxatdan o'tish</Link>
+            </div>
+          )}
         </div>
       </div>
       <div className="sidebar-katalog">
@@ -38,7 +52,7 @@ function Sidebar({ setOpenSidebar }) {
           <BsGeoAlt />
           Shahar: Toshkent
         </button>
-        <Link to={"/delivery"} >
+        <Link to={"/delivery"}>
           <TbMap />
           Topshirish punkti
         </Link>
@@ -64,6 +78,11 @@ function Sidebar({ setOpenSidebar }) {
       <div className="AccordionSidebarLinks">
         <AccordionSidebarLinks />
       </div>
+      {userdata && (
+        <span className="sidebar-logout" onClick={handlerLogout}>
+          Akkauntdan chiqish
+        </span>
+      )}
     </div>
   );
 }
