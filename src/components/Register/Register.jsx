@@ -62,11 +62,13 @@ function RegisterForm({ setOpenRegister }) {
   return (
     <div className="RegisterForm">
       <div className="form_container">
-        <BiLogOut
-          title="Log out"
-          className="form_logout"
-          onClick={logoutHandler}
-        />
+        {user && (
+          <BiLogOut
+            title="Log out"
+            className="form_logout"
+            onClick={logoutHandler}
+          />
+        )}
         <MdClose
           className="form_close"
           onClick={() => setOpenRegister(false)}
