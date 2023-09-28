@@ -111,7 +111,7 @@ function Sorted() {
                 </div>
             </div>
             <div className="sorted_my_wishes_container">
-                {
+                {/* {
                     popularProduct.map((item, index) => (
                         <div className="scrool_bar" key={index}>
                             <div className="cart">
@@ -136,7 +136,7 @@ function Sorted() {
                             </div>
                         </div>
                     ))
-                }
+                } */}
             </div>
         </div>
     )

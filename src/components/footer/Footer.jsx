@@ -9,11 +9,10 @@ import logos_3 from "../../assets/Без_названия__1_-removebg-preview.p
 import logos_4 from "../../assets/Без_названия__2_-removebg-preview.png"
 import ScrollToTop from "react-scroll-to-top";
 
-
 function Footer() {
     return (
         <div className="footer">
-            <ScrollToTop smooth top={20}/>
+            <ScrollToTop smooth top={20} />
             <div className="footer_container">
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>
