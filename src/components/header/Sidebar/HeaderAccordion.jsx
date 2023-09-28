@@ -1,9 +1,7 @@
-// import {Accordion}  from "react-bootstrap";
 import { katalogData } from "../../../static/headerData";
 import { Link } from "react-router-dom";
-import { GrCatalog } from "react-icons/gr";
-
-
+import "./HeaderAccordion.css";
+import { MdOutlineMenuBook } from "react-icons/md";
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -13,50 +11,80 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function BasicExample() {
   return (
-    <div className="BasicExample">
-      <Accordion className="Accordion-sidebar">
+    <Accordion className="Accordion-sidebar">
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon className="sidebar-katalog-icon" />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography>
+          <div className="Accordion-heading">
+            <MdOutlineMenuBook /> Katalog
+          </div>
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        {katalogData.map((item, index) => (
+          <Accordion className="sidebar-kategories">
+            <AccordionSummary
+              key={index}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className="sidebar-accordion-title">
+                {item.title.icon}
+                <p>{item.title.titleName}</p>
+              </Typography>
+            </AccordionSummary>
+
+            {katalogData.map((item) => (
+              <AccordionDetails className="accordionDatum">
+                {item.collection.map((itemlink, index) => (
+                  <Link key={index}>{itemlink.collectionItemName}</Link>
+                ))}
+              </AccordionDetails>
+            ))}
+          </Accordion>
+        ))}
+      </AccordionDetails>
+    </Accordion>
+  );
+}
+
+export function AccordionSidebarLinks() {
+  return (
+    <>
+      <Accordion className="sidebar-accordion-footer">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
           <Typography>
-            <GrCatalog /> Katalog
+            <p className="sidebar-footer-title">Biz haqimizda</p>
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          {katalogData.map((item, index) => (
-            <Typography key={index}>
-              <Accordion className="accordion-inner">
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                >
-                  <Typography>
-                    {item.title.icon}
-                    <p>{item.title.titleName}</p>
-                    
-                    <ul className="accordion-ul">
-                      {item.collection.map((link_item, index) => (
-                        <li key={index}>
-                          <Link to={"/"}>{link_item.collectionItemLinks}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <Link></Link>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </Typography>
-          ))}
+        <AccordionDetails className="sidebar-footer-links">
+          <Link>Topshirish punktlari</Link>
+          <Link>Vakansiyalar</Link>
         </AccordionDetails>
       </Accordion>
-    </div>
+      <Accordion className="sidebar-accordion-footer">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>
+            <p className="sidebar-footer-title">Hamkorlarga</p>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails className="sidebar-footer-links">
+          <Link>Uzumda soting</Link>
+          <Link>Sotuvchi kabinetiga kirish</Link>
+        </AccordionDetails>
+      </Accordion>
+    </>
   );
 }

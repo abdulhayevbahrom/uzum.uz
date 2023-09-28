@@ -12,9 +12,11 @@ button {
 
 a{
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 .hidden-header-p{
   display: none;
+    font-family: 'Inter', sans-serif;
 }
 
 .header_top {
@@ -46,6 +48,7 @@ a{
 .location-info a{
   font-size:var(--font-size);
   color:var(--dark-color) ;
+    font-family: 'Inter', sans-serif;
 }
 
 .header-right{
@@ -62,6 +65,7 @@ a{
 .savollar-buyurtmalar a{
     color: var(--lighter-color);
     font-size: var(--font-size);
+    font-family: 'Inter', sans-serif;
 }
 
 .savollar-buyurtmalar a:hover{
@@ -77,6 +81,7 @@ color:var(--dark-color);
   border: none;
   font-size: var(--font-size);
   color: var(--lighter-color);
+    font-family: 'Inter', sans-serif;
 }
 
 .flag {
@@ -84,7 +89,7 @@ color:var(--dark-color);
   height: 25px;
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 950px) {
   .header_top .header-right, .location-info{
     display: none;
   }

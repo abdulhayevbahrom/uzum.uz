@@ -7,6 +7,7 @@ import logos from "../../assets/606_instagram-removebg-preview.png"
 import logos_2 from "../../assets/Без_названия-removebg-preview.png"
 import logos_3 from "../../assets/Без_названия__1_-removebg-preview.png"
 import logos_4 from "../../assets/Без_названия__2_-removebg-preview.png"
+import ScrollToTop from "react-scroll-to-top";
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import { footerData } from "../../static/footerData";
 
@@ -20,6 +21,49 @@ function Footer() {
     const [click6, setClick6] = useState(false)
     return (
         <div className="footer">
+            <div className="acardion_container">
+                <button onClick={() => setClick1(!click1)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>accordion</h3>
+                        {click1 ? <BsChevronUp/> : <BsChevronDown />}
+                    </div>
+                    {
+                        click1 && (
+                            <div className="hidden_cart">
+                                <Link>{footerData[0].lists}</Link>
+                            </div>
+                        )
+                    }
+                </button>
+                <button onClick={() => setClick2(!click2)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>accordion</h3>
+                        {click2 ? <BsChevronUp/> : <BsChevronDown />}
+                    </div>
+                    {
+                        click2 && (
+                            <div className="hidden_cart">
+                                <Link>{footerData[1].lists}</Link>
+                            </div>
+                        )
+                    }
+                </button>
+                <button onClick={() => setClick3(!click3)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>Biz haqimizda</h3>
+                        {click3 ? <BsChevronUp/> : <BsChevronDown />}
+                    </div>
+                    {
+                        click3 && (
+                            <div className="hidden_cart">
+                                <Link>{footerData[2].lists}</Link>
+                            </div>
+                        )
+                    }
+                </button>
+                
+            </div>
+            <ScrollToTop smooth top={20} />
             <div className="footer_container">
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>
@@ -51,57 +95,16 @@ function Footer() {
                     </div>
                     <h4>Uzum ijtimoiy tarmoqlarda</h4>
                     <div className="social">
+                        <div className="top">
                         <img src={logos} alt="" />
                         <img src={logos_2} alt="" />
+                        </div>
+                        <div className="bottom">
                         <img src={logos_3} alt="" />
                         <img src={logos_4} alt="" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="acardion_container">
-                <button onClick={() => setClick1(!click1)} className="accordion_header_btn">
-                    <div className="click_header">
-                        <h3>accordion</h3>
-                        {click1 ? <BsChevronDown /> : <BsChevronUp />}
-                    </div>
-                    {
-                        click1 && (
-                            <div className="hidden_cart">
-                                <p>{footerData[0].title}</p>
-                                <span>{footerData[0].lists}</span>
-                            </div>
-                        )
-                    }
-                </button>
-                <button onClick={() => setClick2(!click2)} className="accordion_header_btn">
-                    <div className="click_header">
-                        <h3>accordion</h3>
-                        {click2 ? <BsChevronDown /> : <BsChevronUp />}
-                    </div>
-                    {
-                        click2 && (
-                            <div className="hidden_cart">
-                                <p>{footerData[1].title}</p>
-                                <span>{footerData[1].lists}</span>
-                            </div>
-                        )
-                    }
-                </button>
-                <button onClick={() => setClick3(!click3)} className="accordion_header_btn">
-                    <div className="click_header">
-                        <h3>accordion</h3>
-                        {click3 ? <BsChevronDown /> : <BsChevronUp />}
-                    </div>
-                    {
-                        click3 && (
-                            <div className="hidden_cart">
-                                <p>{footerData[2].title}</p>
-                                <span>{footerData[2].lists}</span>
-                            </div>
-                        )
-                    }
-                </button>
-                
             </div>
         </div>
     )
