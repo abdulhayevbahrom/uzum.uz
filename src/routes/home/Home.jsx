@@ -17,8 +17,6 @@ function Home() {
             <Header />
             <MYswiper />
             <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
-            <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
-            <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
             <CardItem1 componentName={"Elektronika"} data={kiyim} />
             <Footer />
         </div>
