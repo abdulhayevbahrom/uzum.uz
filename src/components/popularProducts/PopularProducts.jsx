@@ -216,7 +216,7 @@ function PopularProducts() {
                   <span>{item.title.slice(0, 25) + " ..."} </span>
                   <div className="card_price">
                     <div className="left_price">
-                      <s>{item.price + Math.ceil((item.price * 10))} so'm</s>
+                      <s>{item.price + Math.ceil((item.price * 1))} so'm</s>
                       <p>{item.price + " so'm"}</p>
                     </div>
                     <div className="right_icon_shop">
