@@ -175,7 +175,7 @@ function PopularProducts() {
   const [addatHeart, setAddatHeart] = useState(false)
   return (
     <div className='popular_products'>
-      <AddYourFavorite/>
+      <AddYourFavorite />
       <h2>Ommabop mahsulotlar</h2>
       <div className='ddd'></div>
       <div className="scroll">
@@ -208,7 +208,7 @@ function PopularProducts() {
           ))
         }
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

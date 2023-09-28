@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
@@ -7,12 +7,15 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 // import { NavLink } from 'react-bootstrap'
 import Header from '../header/Header'
 import { useParams } from 'react-router-dom'
+
 // import Tarkib from './tarkib/Tarkib';
 // import Olchamm from './olchamm/Olchamm';
 // import Korsatma from './korsatma/Korsatma';
 // import Tavsif from './tavsif/Tavsif';
 // import Header from '../header/Header'    
 import data from '../../static/bannerDataElektronik'
+import { BsHeartFill } from 'react-icons/bs';
+import { PiHeartThin } from 'react-icons/pi';
 
 function HomeProducts() {
     let { id } = useParams()
@@ -21,7 +24,8 @@ function HomeProducts() {
     let singleData = data?.find(i => i.id.toString() === id)
     console.log(singleData)
 
-    let prices = 29000
+    let prices = (singleData?.price)
+
     const [count, setcount] = useState(1)
     function minus() {
         setcount(count - 1)
@@ -31,10 +35,10 @@ function HomeProducts() {
     }
 
     let price = prices * count
-
+    const [addatHeart, setAddatHeart] = useState(false)
 
     return (
-        <div>
+        <div className='single_pages_parts'>
             <Header />
             <div className='homeproducts'>
                 <div className="homeproducts_boxs">
@@ -65,12 +69,20 @@ function HomeProducts() {
                                 <p><AiFillStar /> 4.9( 38 baho )  </p>
                                 <p>600 ta buyurtma</p>
                             </div>
-                            <h4><AiOutlineHeart /> <span>Istaklarga</span></h4>
+                            <h4>
+                                {/* <AiOutlineHeart /> */}
+                                <button className='herat_changes' onClick={() => setAddatHeart(!addatHeart)}>
+                                    {addatHeart ? <BsHeartFill style={{ color: "#572bd1" }} className='heart_red' /> : <PiHeartThin />}
+                                </button>
+                                <span>{addatHeart ? "istaklarda" : "istaklarga"}</span>
+                            </h4>
                         </div>
-                        <h2>Futbolka yozuvli erkaklar uchun, unisex</h2>
-                        <h3><span>29 000 so'm / birlik </span> <s>89 000 so'm</s></h3>
-                        <p className='homeproducts_boxs_right_4 column_media'><span>Sotuvchi: </span> <span><a href="/">FASHION STORE</a></span></p>
-                        <p className='column_media'><span>Yetkazib berish: </span> <span>1 kun, bepul</span></p>
+                        <h2>{singleData?.description}</h2>
+                        <h3><span>{price} / birlik </span> <s>{price * 1.5}</s></h3>
+                        <p className='homeproducts_boxs_right_4 column_media'><span>Sotuvchi: </span>
+                            <span><a href="/">{singleData?.type}</a></span>
+                        </p>
+                        <p className='column_media'><span>Yetkazib berish: </span> <span>{singleData?.delivery}</span></p>
                         <hr style={{ margin: "20px 0" }} />
                         <p>Rang:</p>
                         <div className="homeproducts_boxs_right_header_text_products_color">
@@ -107,11 +119,11 @@ function HomeProducts() {
                         <p className='display_none_p'>Narx:</p>
                         <div className='homeproducts_boxs_right_header_text_products_prices'>
                             <h2>{price}</h2>
-                            <s>89 000</s>
+                            <s>{price * 1.5}</s>
                             <i>Tug’ilgan kun</i>
                         </div>
                         <div className="homeproducts_boxs_right_header_text_products_select">
-                            <p><span>Oyiga 3 480 so'mdan </span>  muddatli to'lov</p>
+                            <p><span>Oyiga {price / 10} so'mdan </span>  muddatli to'lov</p>
                         </div>
                         <div className="homeproducts_boxs_right_header_text_products_buttons">
                             <button>Savatga qaytish</button>
@@ -126,21 +138,25 @@ function HomeProducts() {
             <div className="sharx_page">
                 <div className="sharx_page_header1">
                     <div className="sharx_page_header1_items">
-                        <NavLink to={"/tavsifi"}>Mahsulot tavsifi</NavLink>
-                        <NavLink to={"/korsatma"}>Ko'rsatma</NavLink>
-                        <NavLink to={"/olchamlar"}>O'lchamlar</NavLink>
-                        <NavLink to={"/tarkib"}>Tarkib</NavLink>
-                        <NavLink to={"/sharhlar"}>Sharhlar(1)</NavLink>
+                        <a href="/">Mahsulot tavsifi</a>
                     </div>
                 </div>
                 <div className="sharx_page_banner_pagess">
-                    {/* <Tavsif/> */}
-                    {/* <Korsatma/> */}
-                    {/* <Olchamm/> */}
-                    {/* <Tarkib/> */}
+                    <p>{singleData?.fullinfo}</p>
                 </div>
             </div>
+            <div className="header_bottom_pages">
+                <div className='header_bottom_pages_price'>
+                    <p>Narx umumiy:</p>
+                    <p>{price} so'm</p>
+                </div>
+                <button className='herat_changes' onClick={() => setAddatHeart(!addatHeart)}>
+                    {addatHeart ? <BsHeartFill style={{ color: "#572bd1", fontSize: "22px" }} className='heart_red' /> : <PiHeartThin style={{ fontSize: "22px" }} />}
+                </button>
+                <button className='header_bottom_page_bottoms'>Savatga </button>
+            </div>
         </div>
+
     )
 }
 

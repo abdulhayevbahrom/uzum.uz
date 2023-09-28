@@ -1,22 +1,19 @@
 export const footerData = [
     {
-        title: "Biz haqimizda",
+        title: "Topshirish punktlari",
         lists: [
-          "Topshirish punktlari",
           "Vakansiyalar"
         ]
     },
     {
-        title: "Foydalanuvchilarga",
+        title: "Biz bilan bogʻlanish",
         lists: [
-        "Biz bilan bogʻlanish",
         "Savol-Javob"  
         ]
     },
     {
-        title: "Tadbirkorlarga",
+        title: "Uzumda soting",
         lists: [
-            "Uzumda soting",
             "Sotuvchi kabinetiga kirish"
         ]
     },

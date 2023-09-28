@@ -16,6 +16,9 @@ import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
 import RegisterForm from "../Register/Register";
+import data from '../../static/bannerDataElektronik'
+
+
 function Header() {
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
@@ -23,11 +26,28 @@ function Header() {
   const [openRegister, setOpenRegister] = useState(false);
   let ism = JSON.parse(localStorage.getItem("user"))?.name;
 
+  const [searchResult, setSearchResult] = useState(null)
+
+  function search(value) {
+    if (!value) {
+      return setSearchResult(null)
+    }
+    let result = data.filter(i => i.title.toLowerCase().includes(value.toLowerCase()))
+    setSearchResult(result)
+  }
+  console.log(searchResult);
+
   return (
     <header>
       <HeaderTop />
       <div className="header_center">
-        {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
+        {openSidebar && (
+          <Sidebar
+            openRegister={openRegister}
+            setOpenRegister={setOpenRegister}
+            setOpenSidebar={setOpenSidebar}
+          />
+        )}
         <div className="header-logo-icon">
           <HiBars3
             onClick={() => setOpenSidebar(!openSidebar)}
@@ -79,10 +99,19 @@ function Header() {
         }
 
         <div className="header_searchbar">
-          <input type="search" placeholder="Mahsulotlar va turkumlar izlash" />
+          <input type="search" placeholder="Mahsulotlar va turkumlar izlash" onChange={(e) => search(e.target.value)} />
           <button>
             <GoSearch />
           </button>
+
+          <div className="searchResult" style={{ display: searchResult?.length ? "flex" : "none" }} >
+            {
+              searchResult?.map((item, index) =>
+                <Link to={`/single-page/${item.id}`} key={index} >{item.title}</Link>
+              )
+            }
+          </div>
+
         </div>
         {openRegister && <RegisterForm setOpenRegister={setOpenRegister} />}
         <div className="header-3links">
@@ -95,11 +124,16 @@ function Header() {
           </button>
 
           <Link to={"/heart"} className="header_user">
-           
+            {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
 
             <AiOutlineHeart />
-            Sevimlilar
+            <span>Sevimlilar</span>
           </Link>
+
+          {/* <Link to={"/cart"} className="header_user">
+            <BsCart />
+            <span>Savat</span>
+          </Link> */}
 
           <Link to={"/cart"} className="header_user">
             <BsCart />

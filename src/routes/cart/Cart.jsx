@@ -1,9 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import Header from '../../components/header/Header'
+import Header from '../../components/header/Header';
+import PopularProducts from '../../components/popularProducts/PopularProducts';
 import Footer from '../../components/footer/Footer';
-import AddProducts from '../../components/addProducts/AddProducts'
-import CartData from '../../components/cartData/CartData';
+import AddProducts from '../../components/addProducts/AddProducts';
+import CartProducts from '../../components/cartProducts/CartProducts';
 
 function Cart() {
     let cartData = useSelector((s) => s.addToCart)
@@ -15,11 +16,12 @@ function Cart() {
             <div>
                 <Header />
                 {
-                    !cartData.length ?
-                        <CartData />
+                    cartData.length ?
+                        <CartProducts data={cartData} />
                         :
                         <AddProducts />
                 }
+                <PopularProducts />
                 <Footer />
             </div>
         </div>

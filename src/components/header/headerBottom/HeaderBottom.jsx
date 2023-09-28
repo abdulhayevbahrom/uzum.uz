@@ -8,9 +8,8 @@ import { GoSearch } from "react-icons/go";
 import { useDispatch } from "react-redux";
 import { OPEN_CATALOG } from "../../../redux/katalog";
 
-
 function HeaderBottom() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <div className="header_bottom">

@@ -1,4 +1,5 @@
 const allData = [
+    // elektronika
     {
         title: "Smartfon",
         description: "Smartfon Tecno Spark Go 2023",
@@ -65,7 +66,7 @@ const allData = [
     },
     {
         title: "Planshet",
-        description: "Planshet va telefonlar uchun ushlagich, 360 gradus metall sirtli",
+        description: "Planshet va telefonlar metall sirtli",
         price: 49000,
         images: ["https://images.uzum.uz/cjhfidbk9fqe2mb6bq7g/original.jpg", "https://images.uzum.uz/cihc8k36edfostii9jcg/original.jpg", "https://images.uzum.uz/cjhfid4jvf2i5uiugai0/original.jpg", "https://images.uzum.uz/cjhfidcvutve1vhnublg/original.jpg", "https://images.uzum.uz/cjhfidcvutve1vhnubl0/original.jpg"],
         type: "Elektronika",
@@ -124,6 +125,9 @@ const allData = [
         fullinfo: [""
         ]
     },
+
+    //kiyim
+
     {
         title: "Ayollar futbolkasi",
         description: "Ayollar futbolkasi Trendyol",
@@ -322,6 +326,9 @@ const allData = [
 
         ]
     },
+
+    //maishiy texnika
+
     {
         title: "Havo tozalagich Xiaomi ",
         description: "Havo tozalagich Xiaomi Mi Smart Air Purifier 4/Pro/Lite, Compact, Global versiyasi",
@@ -368,6 +375,417 @@ const allData = [
         color: "blue",
         sizes: ["BI-101"],
         fullinfo: ["HADID BI-101", "MODEL NO.:BI-101", "220-240V kuchlanish 50-60Hz", "Quvvat 1200-1600 W  ", "Suv idishining hajmi: 200ml.", "Keramika tagligi", "Balandligi 250 (mm) 25 sm.", "Bug'li dazmol", "Made in P.R.C"
+        ]
+    }
+    ,
+    //Poyavzallar
+
+
+    {
+        title: "Krossovka PEAK",
+        description: "Krossovka PEAK",
+        price: 670000,
+        images: ["https://images.uzum.uz/cejdm72vtie1lhbfeiq0/original.jpg", "https://images.uzum.uz/cejdm70l08kcldtp69sg/original.jpg", "https://images.uzum.uz/cejdm72vtie1lhbfeiqg/original.jpg", "https://images.uzum.uz/cejdm72vtie1lhbfeir0/original.jpg", "https://images.uzum.uz/cejdm70v1htd23ajha20/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "black",
+        sizes: [39,40,41,42,43,44,45],
+        fullinfo: [""
+        ]
+    },
+    {
+        title: "Krossovka",
+        description: "Erkaklar uchun krossovka",
+        price: 162000,
+        images: ["https://images.uzum.uz/cjov7bkjvf2hdh3e9mmg/t_product_240_high.jpg", "https://images.uzum.uz/cjov7bjk9fq13g44ou80/original.jpg", "https://images.uzum.uz/cjov7bjk9fq13g44ou8g/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "white",
+        sizes: [39,40,41,42,43,44],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Krossovka",
+        description: "Krossovkalar erkaklar uchun charm",
+        price: 179000,
+        images: ["https://images.uzum.uz/cj4cecr6edfostik71vg/original.jpg", "https://images.uzum.uz/cjo2ahsvutv7lqbs59eg/original.jpg", "https://images.uzum.uz/cjo2ahsjvf2q0hiqdddg/original.jpg","https://images.uzum.uz/cjo2ahsvutv7lqbs59f0/original.jpg","https://images.uzum.uz/cj4ceu36edfostik724g/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "brown",
+        sizes: [39,40,41,42,43,44],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Krossovka",
+        description: "Erkaklar krossovkalari",
+        price: 119000,
+        images: ["https://images.uzum.uz/cidb0fv5d7kom1tinrc0/t_product_240_high.jpg", "https://images.uzum.uz/cidb0flenntd8rfcdf2g/t_product_240_high.jpg", "https://images.uzum.uz/cidb0fv5d7kom1tinrcg/t_product_240_high.jpg","https://images.uzum.uz/chebgbh2uqk7mc7o4bng/t_product_240_high.jpg","https://images.uzum.uz/chebgdd4f2sbulptv6sg/t_product_240_high.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "white",
+        sizes: [39,40,41,42,43,44,45],
+        fullinfo: ["Sun'iy charm, to'qimachilik","PVX murakkab yagona material","Oyoq kiyimlarni yugurish maqsadi; uy uchun; turizm Uniseks","Mavsum yoz; demi-mavsum"
+        ]
+    }
+    ,
+    {
+        title: "Krossovka",
+        description: "Erkaklar krossovkalari",
+        price: 119000,
+        images: ["https://images.uzum.uz/cidb0fv5d7kom1tinrc0/t_product_240_high.jpg", "https://images.uzum.uz/cidb0flenntd8rfcdf2g/t_product_240_high.jpg", "https://images.uzum.uz/cidb0fv5d7kom1tinrcg/t_product_240_high.jpg","https://images.uzum.uz/chebgbh2uqk7mc7o4bng/t_product_240_high.jpg","https://images.uzum.uz/chebgdd4f2sbulptv6sg/t_product_240_high.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "white",
+        sizes: [39,40,41,42,43,44,45],
+        fullinfo: ["Sun'iy charm, to'qimachilik","PVX murakkab yagona material","Oyoq kiyimlarni yugurish maqsadi; uy uchun; turizm Uniseks","Mavsum yoz; demi-mavsum"
+        ]
+    }
+    ,
+    {
+        title: "Zamsh",
+        description: "Mokasinlar ayollar uchun",
+        price: 155000,
+        images: ["https://images.uzum.uz/cjipfusjvf2hn7fe7o3g/original.jpg", "https://images.uzum.uz/cjipfusjvf2hn7fe7o3g/original.jpg", "https://images.uzum.uz/cjipfusjvf2hn7fe7o40/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "turquoise",
+        sizes: [36,37,38,39,40],
+        fullinfo: ["Razmeri razmeriga yuradi.."
+        ]
+    }
+    ,
+    {
+        title: "Tufli",
+        description: "Ayollar uchun tufli, poshnali",
+        price: 228000,
+        images: ["https://images.uzum.uz/cjdo3tsvutv09e7753b0/original.jpg", "https://images.uzum.uz/cjdo3tsvutv09e7753c0/original.jpg", "https://images.uzum.uz/cjdo3tsjvf2trp6s2u00/original.jpg","https://images.uzum.uz/cjdo3tsvutv09e7753bg/original.jpg","https://images.uzum.uz/cjdo3tsjvf2trp6s2u0g/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "flirting",
+        sizes: [36,37,38,39,40],
+        fullinfo: ["Model: Lattini Labutin","Ishlab chiqarilgan davlat: Xitoy","Material: Material ter","Ayollar poshnali tuflisi","O`lcham: 35 - 39","Rang: oq (timsoh), bej (timsoh) va qora (tekis)"
+        ]
+    }
+    ,
+    {
+        title: "Krocs",
+        description: "Krocs shippaklari uniseks",
+        price: 159000,
+        images: ["https://images.uzum.uz/cii5p73ltlh4bk4n4140/original.jpg", "https://images.uzum.uz/cii5p836edfostiicdig/original.jpg", "https://images.uzum.uz/cii5p9540v9pplt58psg/original.jpg","https://images.uzum.uz/cii5pa36edfostiicdk0/original.jpg","https://images.uzum.uz/cit60rl40v9pplt6di50/original.jpg","https://images.uzum.uz/cit60rlenntd8rfe1pe0/original.jpg","https://images.uzum.uz/cit60rn5d7kom1tkc4gg/original.jpg","https://images.uzum.uz/cit60rl40v9pplt6di4g/original.jpg","https://images.uzum.uz/cit60rn5d7kom1tkc4h0/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "flirting",
+        sizes: [36,37,38,39,40],
+        fullinfo: ["Ajablanarli darajada engil va bardoshli","Ichidagi qismi massaj effektini yaratadi","Oson parvarish","Teshiklar havo aylanishiga imkon beradi","Yoz uchun eng yaxshi poyabzal","Tibbiyot xodimlari uchun ideal, ","Bu yozda ajoyib dizayn","EVA ekologik materialdan tayyorlangan","Elastik va juda qulay"
+        ]
+    }
+    ,
+    {
+        title: "Krasovkalar",
+        description: "Erkaklar sport krossovkalari, yozgi",
+        price: 99000,
+        images: ["https://images.uzum.uz/cj1smnlenntd8rfeh07g/original.jpg", "https://images.uzum.uz/cj1smnl40v9pplt6st00/original.jpg", "https://images.uzum.uz/cj1smnlenntd8rfeh080/original.jpg","https://images.uzum.uz/cj1smnlenntd8rfeh080/original.jpg"],
+        type: "Poyavzallar",
+        delivery: "1 kun, bepul",
+        color: "Gray",
+        sizes: [39,40,41,42,42,44],
+        fullinfo: [""
+        ]
+    }
+
+    //aksuasarlar
+    ,
+    {
+        title: "Ziraklar",
+        description: "Ziraklar to'plami, 12 juft",
+        price: 19000,
+        images: ["https://images.uzum.uz/ccshl9f0tgqvlm57nacg/original.jpg", "https://images.uzum.uz/ccshl970tgqvlm57nac0/original.jpg", "https://images.uzum.uz/ccshl9n0tgqvlm57nadg/original.jpg","https://images.uzum.uz/ccshl9f0tgqvlm57nad0/original.jpg","https://images.uzum.uz/ccshl9jb3ho5lmuprrjg/original.jpg","https://images.uzum.uz/ccshknv0tgqvlm57nab0/original.jpg","https://images.uzum.uz/ccshknr5a95unf11v6kg/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "silvery",
+        sizes: [],
+        fullinfo: ["Material: zargarlik qotishmasi","Metall rangi: oltin, kumush","Miqdori: 12 juft","Qulf turi: chinnigullar","Og'irligi: 11,2 g","Turli holatlar uchun turli o'lchamdagi sirg'alar","O'smirlar, qiz do'stingiz, onangiz va o'zingiz uchun ajoyib sovg'a","Ishlab chiqarilgan mamlakat: Xitoy"
+        ]
+    }
+    ,
+    {
+        title: "Uzuklar",
+        description: "Ayollar uzuklari",
+        price: 27000,
+        images: ["https://images.uzum.uz/cd00mpf0tgqvlm57tfpg/original.jpg", "https://images.uzum.uz/cd00mp3b3ho5lmuq21hg/original.jpg", "https://images.uzum.uz/cd00mpbb3ho5lmuq21ig/original.jpg","https://images.uzum.uz/cd00mov0tgqvlm57tfp0/original.jpg","https://images.uzum.uz/cir770540v9pplt66nrg/original.jpg","https://images.uzum.uz/cd00mpbb3ho5lmuq21i0/original.jpg","https://images.uzum.uz/cd00mpf0tgqvlm57tfpg/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "silvery",
+        sizes: [],
+        fullinfo: ["Olchamlari: 16 mm - 18 mm","Material: zargarlik qotishmasi","Metall rangi: kumush","Bir paketdagi miqdor: 15 dona","Original zamonaviy dizayn","Ushbu uzuk to'plami qiz do'stingiz, xotiningiz, onangiz yoki hayotingizdagi boshqa maxsus ayol uchun ajoyib sovg'a bo'lishi mumkin"
+        ]
+    }
+    ,
+    {
+        title: "Sirg'alar",
+        description: "Quloq manjetli sirg'alari",
+        price: 27000,
+        images: ["https://images.uzum.uz/cbpsig4ff5b7qe6p2iq0/original.jpg", "https://images.uzum.uz/cctr2pn0tgqvlm57o31g/original.jpg","https://images.uzum.uz/cd00mov0tgqvlm57tfp0/original.jpg","https://images.uzum.uz/cctr2pn0tgqvlm57o32g/original.jpg","https://images.uzum.uz/cctr2pn0tgqvlm57o320/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "silvery",
+        sizes: [],
+        fullinfo: ["Yorqin va zamonaviy zargarlik buyumlari to'plami","Quloqni teshishni talab qilmaydi va ishonchli ushlab turadi","Material: zargarlik qotishmasi","Sifatli materiallardan tayyorlangan va turli dizaynlarga ega","Shaxsiylikni ta'kidlang va har qanday tasvirga yorqinlik qo'shing","Ushbu rasm ajoyib sovg'a bo'ladi.","Og'irligi: 7.6 g"
+        ]
+    }
+    ,
+    {
+        title: "Hamyon",
+        description: "Hamyon ayollar uchun",
+        price: 22000,
+        images: ["https://images.uzum.uz/cetq310v1htd23akhcfg/original.jpg", "https://images.uzum.uz/cemoj5ivtie1lhbg38u0/original.jpg","https://images.uzum.uz/cetq312vtie1lhbggn40/original.jpg","https://images.uzum.uz/cetq310l08k0o9qhfcc0/original.jpg","https://images.uzum.uz/cetq310v1htd23akhcg0/original.jpg","https://images.uzum.uz/cetq310v1htd23akhcgg/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "Lavender",
+        sizes: [],
+        fullinfo: ["Material: soxta teri","Kartalar uchun 5 ta filial","Astar materiallari: soxta teri","Hamyon hajmi: 11,5*1,5*9 qarang","Hisob-kitoblar uchun 1 ta bo'lim","Yopish turi: tugma"
+        ]
+    }
+    ,
+    {
+        title: "Sumka",
+        description: "Ayollar sumkasi",
+        price: 59000,
+        images: ["https://images.uzum.uz/celfbbol08kcldtpan5g/original.jpg", "https://images.uzum.uz/cf9t7iqvtie1lhbhkkhg/original.jpg","https://images.uzum.uz/cf9t7iol08k0o9qij41g/original.jpg","https://images.uzum.uz/cf9t7j2vtie1lhbhkki0/original.jpg","https://images.uzum.uz/cf9t7j0v1htd23allnrg/original.jpg","https://images.uzum.uz/celfbbol08kcldtpan5g/original.jpg","https://images.uzum.uz/cf9t7iqvtie1lhbhkkhg/original.jpg","https://images.uzum.uz/cf9t7iol08k0o9qij41g/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "white",
+        sizes: [],
+        fullinfo: ["Asosiy material: sun'iy teri","Astar materiallari: polyester","Ichki qism: fermuarli ichki cho'ntak","Chop etish: hayvon","Tasma uzunligi: 26 sm","Hajmi: 20 * 24 * 16 sm"
+        ]
+    }
+    ,
+    {
+        title: "Sumka",
+        description: "Ayollar sumkasi, fermuar, messenjer sumkasi",
+        price: 95000,
+        images: ["https://images.uzum.uz/ccrtg070tgqvlm57mpk0/original.jpg", "https://images.uzum.uz/ccrtg035a95unf11ul40/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "white",
+        sizes: [],
+        fullinfo: ["Ayollar elkama-sumkasi","Zipli sumka","Zanjirli tutqichli messenjer sumkasi","Aksessuar 2 rangda taqdim etilgan: qora va oq","U uchun ajoyib sovg'a","Uzunligi: 22 sm, balandligi: 13 sm, pastki chuqurligi: 7 sm, yuqori chuqurligi: 4 sm"
+        ]
+    }
+    ,
+    {
+        title: "Sumka",
+        description: "Ayollar baget elkama-sumkasi, kichkina",
+        price: 83000,
+        images: ["https://images.uzum.uz/cic49nl40v9pplt4lho0/original.jpg", "https://images.uzum.uz/cic49nd40v9pplt4lhng/original.jpg","https://images.uzum.uz/cic49nf5d7kom1tik5t0/original.jpg","https://images.uzum.uz/cic49nlenntd8rfc9obg/original.jpg","https://images.uzum.uz/cic49nl40v9pplt4lhog/original.jpg","https://images.uzum.uz/cic486bltlh4bk4mgea0/original.jpg"],
+        type: "Aksesuarlar",
+        delivery: "1 kun, bepul",
+        color: "Brown",
+        sizes: [],
+        fullinfo: ["Klassik va zamonaviy ayollar baget sumkasi shkafning ajralmas atributidir.","Sumka juda yengil, ixcham va keng.","Yuqori sifatli eko-teridan qilingan, teginish yoqimli.","Sumka o'lchamlari 20 * 6 * 11 sm"
+        ]
+    }
+    //Parfumerlar
+    ,
+    {
+        title: "Parfyuma",
+        description: "Parfyumlangan suv Avon Incandessence Soleil, 50 ml",
+        price: 30000,
+        images: ["https://images.uzum.uz/cdq9l12vtie1lhbe1frg/original.jpg", "https://images.uzum.uz/cdq9l10v1htd23ai3cpg/original.jpg","https://images.uzum.uz/cdq9l0ov1htd23ai3cp0/original.jpg","https://images.uzum.uz/cdq9l0qvtie1lhbe1fr0/original.jpg"],
+        type: "Go'zallik",
+        delivery: "1 kun, bepul",
+        color: "Brown",
+        sizes: [],
+        fullinfo: ["Xushbo'y hid turi: gul-mevali","Yuqori notalar: Limon, Mandarin, Pulpanat","O'rta notalar: magnoliya, frezya, osmantus absolyut","Asosiy notalar: sandal daraxti, mushk, Ambrox Super (kremsimon yog'och nota)"
+        ]
+    }
+    ,
+    {
+        title: "Parfyuma",
+        description: "Gel oddiy va yog'li teri uchun tozalovchi CeraVe, 236 ml",
+        price: 89000,
+        images: ["https://images.uzum.uz/ci6p7hdenntd8rfbmol0/original.jpg", "https://images.uzum.uz/ci6p7m3ltlh4bk4lt510/original.jpg  ","https://images.uzum.uz/ci6pabd40v9pplt42hj0/original.jpg","https://images.uzum.uz/ci6p7hdenntd8rfbmol0/original.jpg"],
+        type: "Go'zallik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Chuqur tozalash","Terini yangilaydi","Tarkibida niatsinamid mavjud","Parabensiz","Komedogen bo'lmagan","Osiyo bozori uchun lux replica"
+        ]
+    }
+    ,
+    {
+        title: "Zardob ",
+        description: "Zardob yuz uchun qarishga qarshi The Ordinary Peeling, Caffeine, Hyaluronic Acid, 30 ml",
+        price: 120000,
+        images: ["https://images.uzum.uz/cijcvej6edfostiigekg/original.jpg", "https://images.uzum.uz/cijcvld40v9pplt5ctj0/original.jpg","https://images.uzum.uz/cijcvlf5d7kom1tjbhog/original.jpg","https://images.uzum.uz/cijcvldenntd8rfd15jg/original.jpg","https://images.uzum.uz/cijcvlf5d7kom1tjbhp0/original.jpg","https://images.uzum.uz/cijcvlbltlh4bk4n84ig/original.jpg"],
+        type: "Go'zallik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Peeling Solution-mikrorelef tekislash, qora nuqtalarni olib tashlash, oqartirish, tozalash, mustahkamlash, yallig'lanishni olib tashlash, rangni yaxshilash","Caffeine Solution-qora doiralar bilan kurashish uchun, Teri tonlanadi, namlanadi, bir tekis ohang va namlikga ega boladi.","Hyaluronic Acid-kuchli va doimiy namlovchi ta'sirga ega bo'lib, terini elastik, silliq va yoshartiradi."
+        ]
+    }
+    ,
+    {
+        title: "Zardob ",
+        description: "Yuzni oqartirish va sepkillarni yo'qotish uchun zardob mohiyati, 30 ml",
+        price: 27000,
+        images: ["https://images.uzum.uz/cf589jqvtie1lhbh57q0/t_product_240_high.jpg", "https://images.uzum.uz/cf589jol08k0o9qi3k30/original.jpg","https://images.uzum.uz/cijcvldenntd8rfd15jg/original.jpg","https://images.uzum.uz/cf589jgv1htd23al5otg/original.jpg"],
+        type: "Go'zallik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Terini namlaydi, uni oq, elastik va silliq qiladi","Qorong'u dog'larni yoritadi va terining ohangini yaxshilaydi","Pigmentatsiya va sepkillarni keltirib chiqaradigan kirlarni yo'q qiladi"
+        ]
+    }
+    ,
+    {
+        title: "Yuz uchun zardob ",
+        description: "Yuz uchun zardob essensiya Hiisees, niatsinamid bilan, 30 ml",
+        price: 25000,
+        images: ["https://images.uzum.uz/cf2i06qvtie1lhbgtar0/original.jpg", "https://images.uzum.uz/cf2i092vtie1lhbgtarg/original.jpg","https://images.uzum.uz/cf589sgv1htd23al5oug/original.jpg","https://images.uzum.uz/cf589sgv1htd23al5ov0/original.jpg","https://images.uzum.uz/cf589sivtie1lhbh57qg/original.jpg"],
+        type: "Go'zallik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Natriy gialuronat: teri elastik, silliq, ipakdek bo'ladi","Terini torting va oqartiring","Teri silliqligi uchun salyangoz sekretsiyasi filtrati: yuzdagi akne va qo'pol teri uchun","Oltin barg tarkibi terini isitadi va oziqlantiradi, quruqlik va suvsizlanishni yo'qotadi","Teshiklarni toraytiradi, akne (qora nuqta, sivilcalar) va yog'li teriga qarshi kurashadi","Ikkilamchi tozalash effekti bilan yoshartiradi","Yumshoq parvarish va namlovchi","Niatsinamid + Oltin: Niatsinamid va oltin terini parvarish qilish uchun ingredientlarni o'z ichiga oladi, teriga yumshoq g'amxo'rlik qiladi va foydalanishdan keyin uni yumshoq qiladi."
+        ]
+    }
+
+    //salomatlik
+    ,
+    {
+        title: "Massajor nefritli ",
+        description: "Massajor nefritli 3 tasi 1 da, massaj to'plami rolik, cho'tka, skrebok guash",
+        price: 40000,
+        images: ["https://images.uzum.uz/cetakj0v1htd23akgflg/original.jpg", "https://images.uzum.uz/ceu2ot8l08k0o9qhh21g/original.jpg","https://images.uzum.uz/ceu2ou2vtie1lhbgibng/original.jpg","https://images.uzum.uz/ceu2ougl08k0o9qhh220/original.jpg"],
+        type: "salomatlik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Uqalagich ",
+        description: "Bosh terisi va tana uchun uqalagich",
+        price: 25000,
+        images: ["https://images.uzum.uz/ccbqm2622va03rn5fv20/original.jpg", "https://images.uzum.uz/ccbqm56ha885kmcq9kig/original.jpg","https://images.uzum.uz/ccvf88b5a95unf122ck0/original.jpg","https://images.uzum.uz/ccvf88bb3ho5lmuq1g50/original.jpg","https://images.uzum.uz/ccvf88jb3ho5lmuq1g5g/original.jpg","https://images.uzum.uz/ccvf88j5a95unf122ckg/original.jpg"],
+        type: "salomatlik",
+        delivery: "1 kun, bepul",
+        color: "purple",
+        sizes: [],
+        fullinfo: ["Materiallar: plastik, silikon","Hipoalerjenik, aşınmaya bardoshli, yumshoq tish materiallari","Ergonomik massaj dizayni: qulay tutqich, yumaloq shakl, osma teshik","Muntazam foydalanish qon aylanishini yaxshilaydi va soch o'sishiga yordam beradi","Stress va bosh og'rig'ini engillashtiradi, tinchlantiradi","Massajchining korpusidagi tutqich ushlagichi uni qo'lingizga mahkam o'rnatishga imkon beradi","Vannada yoki dushda foydalanish mumkin","O'lcham: 7.5 * 7 sm"
+        ]
+    }
+    ,
+    {
+        title: "Lifting massajchi ",
+        description: "Lifting massajchi 3D Massager yuz, qo'l va tana uchun",
+        price: 31000,
+        images: ["https://images.uzum.uz/cee3o4gv1htd23aj5lq0/original.jpg", "https://images.uzum.uz/cee3o4gv1htd23aj5lq0/original.jpg","https://images.uzum.uz/cdtn2s0l08kcldtnu5lg/original.jpg","https://images.uzum.uz/cdtn2v2vtie1lhbe62o0/original.jpg","https://images.uzum.uz/cdtn2v0v1htd23ai813g/original.jpg","https://images.uzum.uz/ce11iogv1htd23aid7l0/original.jpg","https://images.uzum.uz/ce11ioqvtie1lhbeamf0/original.jpg"],
+        type: "salomatlik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Holatni tuzatuvchi Smart Sensor Corrector, ",
+        description: "Holatni tuzatuvchi Smart Sensor Corrector, vibratsiyali ortopedik korset",
+        price: 48000,
+        images: ["https://images.uzum.uz/cdtut6gl08kcldtnued0/original.jpg", "https://images.uzum.uz/ce6pd0ov1htd23ainrb0/original.jpg","https://images.uzum.uz/ce6pd10l08kcldtoc5a0/original.jpg","https://images.uzum.uz/ce6pd10l08kcldtoc5a0/original.jpg","https://images.uzum.uz/ce6pd10v1htd23ainrbg/original.jpg","https://images.uzum.uz/ce6pd10v1htd23ainrc0/original.jpg"],
+        type: "salomatlik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Tik turgan va o'tirgan holatda to'g'ri holatni saqlashga yordam beradi","Noto'g'ri pozitsiyani qabul qilganingizdan so'ng ovoz va tebranish signali yoqiladi","Tuzatuvchini sozlash oson - 15 dan 95 kg gacha bo'lgan odamlar uchun javob beradi","Hajmi universal sozlanishi","Quvvat: o'rnatilgan 500mah batareya","Batareya quvvati 2 soatdan 15 kungacha ishlaydi","Ko'krak hajmi oralig'i 70 dan 120 sm gacha","Holatni tuzatuvchisini kuniga 2 soat kiyish tavsiya etiladi.","USB orqali zaryadlash"
+        ]
+    }
+    ,
+    {
+        title: "Gigiyenik plastir ",
+        description: "Gigiyenik plastirlar, 19 * 72 mm, 100 dona",
+        price: 1000,
+        images: ["https://images.uzum.uz/cjffrlkjvf2pi6u79it0/original.jpg", "https://images.uzum.uz/cjffrl4jvf2pi6u79is0/original.jpg","https://images.uzum.uz/cjffrlcjvf2pi6u79isg/original.jpg"],
+        type: "salomatlik",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [10,20,30,40,50,60,70,80,90,100,110,120,130],
+        fullinfo: [""
+        ]
+    }
+    //uy ro'zg'or buyumlari
+    ,
+    {
+        title: "Choynak Kukmara zanglamaydigan",
+        description: "Choynak Kukmara zanglamaydigan po'latdan, hushtak bilan, 3 litr",
+        price: 124000,
+        images: ["https://images.uzum.uz/cammvre3p3gj5u389pc0/original.jpg  ", "https://images.uzum.uz/cammvvm3p3gj5u389pcg/original.jpg","https://images.uzum.uz/camn0gu3p3gj5u389pdg/original.jpg"],
+        type: "Buyumlar",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [10,20,30,40,50,60,70,80,90,100,110,120,130],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Kastryulka ",
+        description: "Kukmara Granit Uitra Blue, shisha qopqoq bilan AP",
+        price: 216000,
+        images: ["https://images.uzum.uz/cdcbg2r5a95unf139220/original.jpg ", "https://images.uzum.uz/ch9od2p6i6dim8r6sb6g/original.jpg","https://images.uzum.uz/cdcbg2r5a95unf13922g/original.jpg","https://images.uzum.uz/cdcbg2r5a95unf139230/original.jpg"],
+        type: "Buyumlar",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: ["Devorlar va pastki qismning sezilarli qalinligi panning tanasining deformatsiyasini yo'q qiladi;","Devorlar va pastki qismning sezilarli qalinligi panning tanasining deformatsiyasini yo'q qiladi","Mustahkamlangan yopishmaydigan tizim;","Mahsulotlar yonmaydi va ta'mini saqlamaydi;","Yuvish qulayligi;","induksiyadan tashqari barcha turdagi pechkalar uchun javob beradi;"
+        ]
+    }
+    ,
+    {
+        title: "tova",
+        description: "Tova O.M.S 3210 00 07, yopishmaydigan qoplamali, 28 * 6 sm, 3 litr",
+        price: 199000,
+        images: ["https://images.uzum.uz/cglvuoj57mg9720dm9e0/original.jpg ", "https://images.uzum.uz/cfpocifg49devoa8nac0/original.jpg","https://images.uzum.uz/cfpocifhgiov1qicj06g/original.jpg","https://images.uzum.uz/cfpocifg49devoa8nabg/original.jpg"],
+        type: "Buyumlar",
+        delivery: "1 kun, bepul",
+        color: "",
+        sizes: [],
+        fullinfo: [""
+        ]
+    }
+    ,
+    {
+        title: "Parda",
+        description: "Pardalar kdf, monoxrom dekorativ pardalar, yotoq va bolalar xonasi uchun blackaut pardalar",
+        price: 199000,
+        images: ["https://images.uzum.uz/cji7u7svutv1klhdoclg/original.jpg", "https://images.uzum.uz/cfpocifg49devoa8nac0/original.jpg","https://images.uzum.uz/ci99jlr6edfostihe0ug/original.jpg","https://images.uzum.uz/ci99jm5enntd8rfbv6h0/original.jpg","https://images.uzum.uz/ci99jlr6edfostihe0v0/original.jpg"],
+        type: "Buyumlar",
+        delivery: "1 kun, bepul",
+        color: "broen",
+        sizes: [],
+        fullinfo: ["Uskunalar: 1 dona","Material: Polyester","Parda lentasidagi pardalar 6 sm","Teginganda yumshoq va baxmal","Komplekta pardalar kanchasiz","Maqsad: yotoqxona, bolalar xonasi, oshxona, yashash xonasi uchun","Rang haqiqiydan bir necha tonnaga farq qilishi mumkin, bu holat ranglarning ko'payishi bilan bog'liq va zavod nikohi emas.","O'lcham: 150*280 sm"
+        ]
+    }
+    ,
+    {
+        title: "Choyshab",
+        description: "Choyshab bilan qoplangan ikki kishilik choyshablar to'plami",
+        price: 220000,
+        images: ["https://images.uzum.uz/ck6lgprk9fqd6b9u0smg/original.jpg", "https://images.uzum.uz/ck6lgt4jvf2su072qnf0/original.jpg","https://images.uzum.uz/ck6lh13k9fqd6b9u0sqg/original.jpg","https://images.uzum.uz/ck3cs3kvutvccfo2gcq0/original.jpg"],
+        type: "Buyumlar",
+        delivery: "1 kun, bepul",
+        color: "blue",
+        sizes: [],
+        fullinfo: ["Mato HB saten 70 %","Teginganda yumshoq va baxmal","Yostiq jildlar: 50  70 2 dona","Adyol 220  200, hoyshab 220  230"
         ]
     }
 ]
