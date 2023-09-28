@@ -5,11 +5,18 @@ import { AiFillHeart, AiOutlineHeart, AiOutlineRight } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Add_To_Heart } from '../../../redux/addToHeart'
+import {ADD_TO_CART} from '../../../redux/addToCart'
+import { toast } from "react-toastify";
 
 function CardItem1({ data, componentName }) {
   const dispatch = useDispatch()
   const heartData = useSelector(s => s.addToHeart).map(i => i.id)
+<<<<<<< HEAD
 
+=======
+  const cartData = useSelector(s => s.addToCart).map(i => i.id)
+  
+>>>>>>> origin/umarxon
 
 
   return (
@@ -38,10 +45,29 @@ function CardItem1({ data, componentName }) {
             <b>5.0 (baxo 36)</b>
             <p className='sariq'>{Math.ceil(item.price / 12)} so'm oyiga</p>
             <div className="productPrice">
+<<<<<<< HEAD
               <div className='price'>
                 <s>{Math.ceil(item.price + (item.price % 5))} so'm </s>
                 <b>{item.price} so'm </b></div>
               < TbShoppingBagPlus className='shopicon' />
+=======
+            <div className='price'>  
+            <s>7000 so'm </s>
+              <b>5000 so'm </b></div>
+              {
+              cartData.some(i => i === item.id) ?
+                <>
+                  <TbShoppingBagPlus className='shopicon' onClick={() => dispatch(ADD_TO_CART({ pro: item }))} />
+                  {toast.success("You have successfully registered", {
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 1500,
+                    hideProgressBar: true,
+                  })}
+                </>
+                :
+                <TbShoppingBagPlus className='shopicon' onClick={() => dispatch(ADD_TO_CART({ pro: item }))} />
+            }
+>>>>>>> origin/umarxon
             </div>
           </div>
         ))}
