@@ -189,11 +189,7 @@ function PopularProducts() {
                   </div>
                 </div>
                 <div className="bottom_cart_data">
-<<<<<<< HEAD
-                  <span>{item.data.slice(0, 29) + " ..."} </span>
-=======
                   <span>{item.data.slice(0 , 25) + " ..."} </span>
->>>>>>> origin/msoleh01
                   <div className="card_price">
                     <div className="left_price">
                       <s>{item.price + " so'm"}</s>

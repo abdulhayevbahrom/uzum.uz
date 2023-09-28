@@ -12,25 +12,15 @@ import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { FiX, FiChevronRight } from "react-icons/fi";
 import { katalogData } from "../../static/headerData";
-<<<<<<< HEAD
-import { HiBars3 } from 'react-icons/hi2'
-=======
 import { HiBars3 } from "react-icons/hi2";
->>>>>>> origin/Gulnoza
 import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
 
 function Header() {
-<<<<<<< HEAD
-  const dispatch = useDispatch()
-  const catalogState = useSelector(s => s.katalog)
-  const [openSidebar, setOpenSidebar] = useState(false)
-=======
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
->>>>>>> origin/Gulnoza
 
   return (
     <header>
@@ -38,14 +28,10 @@ function Header() {
       <div className="header_center">
         {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
         <div className="header-logo-icon">
-<<<<<<< HEAD
-          <HiBars3 onClick={() => setOpenSidebar(!openSidebar)} className="open-sidebar" />
-=======
           <HiBars3
             onClick={() => setOpenSidebar(!openSidebar)}
             className="open-sidebar"
           />
->>>>>>> origin/Gulnoza
           <Link to={"/"} className="header_logo">
             <img src={logo} alt="" />
           </Link>
@@ -102,19 +88,12 @@ function Header() {
             <span>Bahromjon</span>
           </Link>
 
-<<<<<<< HEAD
-          <Link to={"/heart"} className="header_user">
-            <AiOutlineHeart />
-            <span>Sevimlilar</span>
-          </Link>
-=======
         <Link to={"/heart"} className="header_user">
           {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
           
           <AiOutlineHeart />
           Sevimlilar
         </Link>
->>>>>>> origin/msoleh01
 
           <Link to={"/user"} className="header_user">
             <BsCart />
