@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-import React,{useState} from 'react'
-import { Link, NavLink } from "react-router-dom";
-import {Routes, Route} from "react-router-dom"
-=======
 import React,{} from 'react'
->>>>>>> origin/umarxon
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
 // import Tarkib from './tarkib/Tarkib';
 // import Olchamm from './olchamm/Olchamm';
 // import Korsatma from './korsatma/Korsatma';

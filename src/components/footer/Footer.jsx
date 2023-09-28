@@ -1,14 +1,5 @@
 import React from "react";
 import "./Footer.css"
-<<<<<<< HEAD
-import {Link} from 'react-router-dom'
-import ScrollToTop from "react-scroll-to-top";
-
-function Footer(){
-    
-    return(
-        
-=======
 import { Link } from 'react-router-dom'
 import { Accordion } from 'react-bootstrap'
 import src from "../../assets/png-transparent-apple-logo-iphone-computer-apple-logo-company-heart-logo-removebg-preview.png"
@@ -22,9 +13,8 @@ import { footerData } from "../../static/footerData";
 
 function Footer() {
     return (
->>>>>>> origin/raxmatullo
         <div className="footer">
-            <ScrollToTop smooth top={20}/>
+            {/* <ScrollToTop smooth top={20}/> */}
             <div className="footer_container">
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>

@@ -1,10 +1,22 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import Header from '../../components/header/Header';
+import PopularProducts from '../../components/popularProducts/PopularProducts';
+import Footer from '../../components/footer/Footer';
+import AddProducts from '../../components/addProducts/AddProducts';
+import CartProducts from '../../components/cartProducts/CartProducts';
 
 function Cart() {
     let cartData = useSelector((s) => s.addToCart)
     return (
         <div className='cart'>
+            <div>
+                <Header/>
+                <AddProducts/>
+                <CartProducts/>
+                <PopularProducts/>
+                <Footer/>
+            </div>
             {
                 cartData.map((pro, index) => {
                     return (
