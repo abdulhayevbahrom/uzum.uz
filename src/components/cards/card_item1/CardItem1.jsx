@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+
 function CardItem1({ data, componentName }) {
   const dispatch = useDispatch()
   const heartData = useSelector(s => s.addToHeart).map(i => i.id)

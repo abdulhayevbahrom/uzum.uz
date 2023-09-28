@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import './PopularProducts.css'
 import { PiHeartThin } from 'react-icons/pi'
-import { BsBagPlus, BsHeartFill } from 'react-icons/bs'
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
+import { TbShoppingBagPlus } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import AddYourFavorite from '../addYourFavorite/AddYourFavorite'
 import Footer from '../footer/Footer'
+import data from '../../static/bannerDataElektronik'
+import { Add_To_Heart } from '../../redux/addToHeart'
+import { ADD_TO_CART } from '../../redux/addToCart'
+import { useDispatch, useSelector } from 'react-redux'
+import { toast } from "react-toastify";
 
 
 export const popularProduct = [
@@ -172,7 +178,19 @@ export const popularProduct = [
 
 
 function PopularProducts() {
-  const [addatHeart, setAddatHeart] = useState(false)
+  const dispatch = useDispatch()
+  const heartData = useSelector(s => s.addToHeart).map(i => i.id)
+  const cartData = useSelector(s => s.addToCart).map(i => i.id)
+
+  function addToCart(item) {
+    dispatch(ADD_TO_CART({ pro: item }))
+    toast.success("You have successfully registered", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1500,
+      hideProgressBar: true,
+    })
+  }
+
   return (
     <div className='popular_products'>
       <AddYourFavorite />
@@ -180,26 +198,36 @@ function PopularProducts() {
       <div className='ddd'></div>
       <div className="scroll">
         {
-          popularProduct.map((item, index) => (
+          data.map((item, index) => (
             <div className="scrool_bar" key={index}>
               <div className="cart">
                 <div className="top_cart">
-                  <Link to={`/single-page/${item.id}`}><img src={item.img} alt={item.data} /></Link>
+                  <Link to={`/single-page/${item.id}`}><img src={item.images[0]} alt={item.title} /></Link>
                   <div className="icon_heart">
-                    <button onClick={() => setAddatHeart(!addatHeart)}>
-                      {addatHeart ? <BsHeartFill className='heart_red' /> : <PiHeartThin />}
-                    </button>
+                    {
+                      heartData.some(i => i === item.id) ?
+                        <AiFillHeart className='heart' onClick={() => dispatch(Add_To_Heart({ pro: item }))} />
+                        :
+                        <AiOutlineHeart className='heart' onClick={() => dispatch(Add_To_Heart({ pro: item }))} />
+                    }
                   </div>
                 </div>
                 <div className="bottom_cart_data">
-                  <span>{item.data.slice(0, 25) + " ..."} </span>
+                  <span>{item.title.slice(0, 25) + " ..."} </span>
                   <div className="card_price">
                     <div className="left_price">
-                      <s>{item.price + " so'm"}</s>
+                      <s>{item.price + Math.ceil((item.price % 10)) + "so'm"}</s>
                       <p>{item.price + " so'm"}</p>
                     </div>
                     <div className="right_icon_shop">
-                      <BsBagPlus />
+                      {
+                        cartData.some(i => i === item.id) ?
+                          <>
+                            <TbShoppingBagPlus className='shopicon' onClick={() => addToCart(item)} />
+                          </>
+                          :
+                          <TbShoppingBagPlus className='shopicon' onClick={() => dispatch(ADD_TO_CART({ pro: item }))} />
+                      }
                     </div>
                   </div>
                 </div>
