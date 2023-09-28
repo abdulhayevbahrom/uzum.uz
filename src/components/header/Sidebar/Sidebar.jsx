@@ -13,7 +13,7 @@ import { AccordionSidebarLinks } from "./HeaderAccordion";
 import { TbBookDownload, TbMap } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 
-function Sidebar({ setOpenSidebar }) {
+function Sidebar({ setOpenSidebar, setOpenRegister }) {
   let userdata = JSON.parse(localStorage.getItem("user"));
   function handlerLogout() {
     window.confirm("Do you really want to log out?") &&
@@ -24,7 +24,7 @@ function Sidebar({ setOpenSidebar }) {
     <div className="Sidebar">
       <div className="sidebar-top">
         <AiOutlineClose onClick={() => setOpenSidebar(false)} />
-        <div className="sidebar-top-register">
+        <div onClick={() => setOpenRegister(true)} className="sidebar-top-register">
           {userdata ? (
             <div className="profil">
               <BiUser /> <span>{userdata.name}</span>
