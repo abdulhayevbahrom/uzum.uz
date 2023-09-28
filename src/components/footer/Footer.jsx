@@ -12,7 +12,11 @@ import ScrollToTop from "react-scroll-to-top";
 function Footer() {
     return (
         <div className="footer">
+<<<<<<< HEAD
             <ScrollToTop smooth top={20} />
+=======
+            {/* <ScrollToTop smooth top={20}/> */}
+>>>>>>> origin/diyora
             <div className="footer_container">
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>

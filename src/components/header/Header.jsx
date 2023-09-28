@@ -20,8 +20,11 @@ function Header() {
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
+<<<<<<< HEAD
   const [openRegister, setOpenRegister] = useState(false);
   let ism = JSON.parse(localStorage.getItem("user"))?.name;
+=======
+>>>>>>> origin/diyora
 
   return (
     <header>
@@ -100,6 +103,7 @@ function Header() {
             <span className="header-user-text">{ism ? ism : "Kirish"}</span>
           </button>
 
+<<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
             {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
             <AiOutlineHeart />
@@ -108,6 +112,18 @@ function Header() {
 
             <AiOutlineHeart />
             Sevimlilar
+=======
+        <Link to={"/heart"} className="header_user">
+          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
+          
+          <AiOutlineHeart />
+          Sevimlilar
+        </Link>
+
+          <Link to={"/cart"} className="header_user">
+            <BsCart />
+            <span>Savat</span>
+>>>>>>> origin/diyora
           </Link>
 
           <Link to={"/cart"} className="header_user">
