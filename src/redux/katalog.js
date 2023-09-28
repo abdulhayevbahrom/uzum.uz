@@ -10,5 +10,6 @@ export const katalog = createSlice({
     }
 })
 
+
 export const { OPEN_CATALOG } = katalog.actions
 export default katalog.reducer

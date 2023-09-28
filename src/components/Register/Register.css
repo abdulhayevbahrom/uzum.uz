@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
 .RegisterForm .form_container {
-  max-width: 450px;
+  max-width: 350px;
   width: 100%;
   position: fixed;
   top: 50%;
@@ -44,10 +46,12 @@
 }
 
 .form_container h2 {
-  font-size: 22px;
-  color: #0b0217;
+  font-size: 20px;
+  color: #7d2ae8;
   text-align: center;
   margin-bottom: 15px;
+  font-weight: 550;
+  font-family: "Poppins", sans-serif;
 }
 
 .input_box {
@@ -63,9 +67,10 @@
   border: none;
   outline: none;
   padding: 0 30px;
-  color: #333;
+  color: rgb(18, 17, 17);
   transition: all 0.2s ease;
-  border-bottom: 1px solid #605a5a;
+  border-bottom: 1px solid rgb(129, 126, 126);
+  font-family: "Poppins", sans-serif;
 }
 
 .input_box input:focus {
@@ -138,13 +143,21 @@
   color: #0b0217;
 }
 
-.form_container .button {
+.form_container .registerButton {
   background: #7d2ae8;
   margin-top: 30px;
   width: 100%;
-  padding: 10px 0;
+  padding: 7px 0;
   border-radius: 10px;
   color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.registerButton:hover {
+  transform: scale(1.01);
 }
 
 .login_signup {

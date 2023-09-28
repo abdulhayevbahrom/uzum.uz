@@ -27,7 +27,13 @@ function Header() {
     <header>
       <HeaderTop />
       <div className="header_center">
-        {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
+        {openSidebar && (
+          <Sidebar
+            openRegister={openRegister}
+            setOpenRegister={setOpenRegister}
+            setOpenSidebar={setOpenSidebar}
+          />
+        )}
         <div className="header-logo-icon">
           <HiBars3
             onClick={() => setOpenSidebar(!openSidebar)}
@@ -88,7 +94,7 @@ function Header() {
             onClick={() => setOpenRegister(!openRegister)}
             className="header_user"
           >
-            <BiUser/>
+            <BiUser />
             <span className="header-user-text">{ism ? ism : "Kirish"}</span>
           </button>
 

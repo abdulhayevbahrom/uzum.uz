@@ -23,6 +23,8 @@ function RegisterForm({ setOpenRegister }) {
   const [surname, setSurname] = useState(user ? user.surname : "");
   const [number, setNumber] = useState(user ? user.number : "");
   const [showPassword, setShowpassword] = useState(false);
+  document.title = "Uzum-Register";
+  document.body.setAttribute("style", "overflow:hidden");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +34,7 @@ function RegisterForm({ setOpenRegister }) {
       !validNumber.test(number) ||
       !validSurname.test(surname)
     ) {
-      toast.error("username or password incorrect", {
+      toast.error("Yaroqsiz ma'lumot kiritildi", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 1500,
       });
@@ -45,7 +47,7 @@ function RegisterForm({ setOpenRegister }) {
         number: number,
       };
       localStorage.setItem("user", JSON.stringify(userData));
-      toast.success("loged in successfully", {
+      toast.success(  !user ? "Ro'yxatdan muvaffaqqiyatli o'tdingiz" : "O'zgarishlar saqlandi" , {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 1500,
         hideProgressBar: true,
@@ -54,9 +56,15 @@ function RegisterForm({ setOpenRegister }) {
     }
   };
   function logoutHandler() {
-    window.confirm("Do you really want to log out?") &&
+    window.confirm("Rostdan ham akkauntdan chiqishni xohlaysizmi?") &&
       localStorage.removeItem("user");
     setOpenRegister(false);
+  }
+
+  function handleClose() {
+    setOpenRegister(false);
+  document.body.setAttribute("style", "overflow:scroll");
+
   }
 
   return (
@@ -64,17 +72,17 @@ function RegisterForm({ setOpenRegister }) {
       <div className="form_container">
         {user && (
           <BiLogOut
-            title="Log out"
+            title="Chiqish"
             className="form_logout"
             onClick={logoutHandler}
           />
         )}
         <MdClose
           className="form_close"
-          onClick={() => setOpenRegister(false)}
+          onClick={handleClose}
         />
         <form className="register-form" onSubmit={handleSubmit}>
-          <h2>Register</h2>
+          <h2>{!user ?  "Ro'yxatdan o'tish'"  : 'Malumotlaringiz'}</h2>
 
           <div className="input_box">
             <input
@@ -138,17 +146,15 @@ function RegisterForm({ setOpenRegister }) {
           <div className="option_field">
             <span className="checkbox">
               <input type="checkbox" />
-              <span>Remember me</span>
+              <span>Eslab qolish</span>
             </span>
           </div>
           <div>
-            <button className="button" type="submit">
-              Submit
-            </button>
+            <input className="registerButton" value={user ? "O'zgarishlarni saqlash" : "Ro'yxatdan o'tish"  }type="submit" />
           </div>
           <div className="login_signup">
-            Already have an account?
-            <Link to={"/login"}> Login</Link>
+            Allaqachon ro'yxatdan o'tganmisiz?
+            <Link to={"/login"}>Kirish</Link>
           </div>
         </form>
       </div>
