@@ -18,10 +18,7 @@ const router = createBrowserRouter(
       path: "/heart",
       element: <Wishes></Wishes>,
     },
-    {
-      path: "/sorted",
-      element: <SortedRoutes></SortedRoutes>
-    },
+    
     {
       path: "/cart",
       element: <Cart></Cart>,

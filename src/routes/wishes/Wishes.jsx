@@ -2,16 +2,22 @@ import React from 'react'
 import './Wishes.css'
 import Header from '../../components/header/Header'
 import AddYourFavorite from "../../components/addYourFavorite/AddYourFavorite"
-import PopularProducts from '../../components/popularProducts/PopularProducts'
-import Footer from '../../components/footer/Footer'
+import PopularProducts, { popularProduct } from '../../components/popularProducts/PopularProducts'
+// import {PopularProducts} from '../../components/popularProducts/PopularProducts'
+import Sorted from '../../components/sorted/Sorted'
 
 function Wishes() {
   return (
     <div className='wishes'>
       <Header />
-      <AddYourFavorite />
-      <PopularProducts />
-      <Footer />
+      {
+       !popularProduct.length 
+          ?
+          <Sorted/> 
+          :
+          <PopularProducts/>
+        
+      }
     </div>
   )
 }

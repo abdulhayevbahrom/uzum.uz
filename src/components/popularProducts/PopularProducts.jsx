@@ -3,9 +3,11 @@ import './PopularProducts.css'
 import { PiHeartThin } from 'react-icons/pi'
 import { BsBagPlus, BsHeartFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import AddYourFavorite from '../addYourFavorite/AddYourFavorite'
+import Footer from '../footer/Footer'
 
 
-const popularProduct = [
+export const popularProduct = [
   {
     title: "Ommabop mahsulotlar",
     img: "https://images.uzum.uz/cjutr5kjvf2hdh3fato0/t_product_540_high.jpg#1695437646607",
@@ -173,6 +175,7 @@ function PopularProducts() {
   const [addatHeart, setAddatHeart] = useState(false)
   return (
     <div className='popular_products'>
+      <AddYourFavorite/>
       <h2>Ommabop mahsulotlar</h2>
       <div className='ddd'></div>
       <div className="scroll">
@@ -209,6 +212,7 @@ function PopularProducts() {
           ))
         }
       </div>
+      <Footer/>
     </div>
   )
 }

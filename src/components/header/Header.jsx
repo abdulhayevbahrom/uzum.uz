@@ -105,10 +105,7 @@ function Header() {
 
 <<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
-            {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
-            <AiOutlineHeart />
-            <span className="header-user-text">Sevimlilar</span>
-            {/* </Link> */}
+           
 
             <AiOutlineHeart />
             Sevimlilar
