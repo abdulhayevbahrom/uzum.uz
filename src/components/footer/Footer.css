@@ -10,15 +10,20 @@
 .footer_container{
     width: 90%;
     height: 37vh;
-    background-color: #ffffff;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    display: none;
 }
 
 .footer_container .footer_col{
+    width: 24%;
+    height: 35vh;
+    background-color: #ffffff;
+}
+
+.footer_container .footer_coll{
     width: 24%;
     height: 35vh;
     background-color: #ffffff;
@@ -33,25 +38,22 @@
     display: flex;
 }
 
-.footer_container .footer_col .app_store{
+.footer_container .footer_coll .app_store{
     display: flex;
 }
 
-.footer_container .footer_col .app_store {
-    display: flex;
-}
 
-.footer_container .footer_col .app_store img{
+.footer_container .footer_coll .app_store img{
     width: 30px;
     height: 25px;
     margin-top: 7px;
 }
 
-.footer_container .footer_col .google_play {
+.footer_container .footer_coll .google_play {
     display: flex;
 }
 
-.footer_container .footer_col .google_play .img{
+.footer_container .footer_coll .google_play .img{
     width: 30px;
     height: 25px;
     margin-top: 7px;
@@ -64,14 +66,48 @@
     color: #4D4e59;
 }
 
-.footer_container .footer_col .social {
+.footer_container .footer_coll .social {
     display: flex;
 }
 
 
-.footer_container .footer_col .social  img{
+.footer_container .footer_coll .social  img{
     width: 50px;
     height: 50px;
+}
+
+.accordion_header_btn {
+    width: 400px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+    display: none;
+}
+
+.click_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 2%;
+}
+
+.accordion_header_btn .hidden_cart {
+    width: 100%;
+    padding: 2% 1%;
+    background-color: dodgerblue;
+    /* position: absolute; */
+    bottom: -78px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
 }
 
 /* ------------------------------------------------- */
@@ -79,6 +115,14 @@
 @media screen and (max-width:1100px) {
 .footer_container .footer_col .google_play, 
 .footer_container .footer_col .app_store {
-    font-size: 15px;
+    font-size: 13px;
 }
 }
+
+
+@media screen and (max-width:900px) {
+    .accordion_header_btn {
+        display: block;
+    }
+}
+

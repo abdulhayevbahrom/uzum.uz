@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css"
 import { Link } from 'react-router-dom'
-import { Accordion } from 'react-bootstrap'
 import src from "../../assets/png-transparent-apple-logo-iphone-computer-apple-logo-company-heart-logo-removebg-preview.png"
 import img from "../../assets/images-removebg-preview.png"
 import logos from "../../assets/606_instagram-removebg-preview.png"
 import logos_2 from "../../assets/Без_названия-removebg-preview.png"
 import logos_3 from "../../assets/Без_названия__1_-removebg-preview.png"
 import logos_4 from "../../assets/Без_названия__2_-removebg-preview.png"
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import { footerData } from "../../static/footerData";
 
 
 function Footer() {
+    const [click1, setClick1] = useState(false)
+    const [click2, setClick2] = useState(false)
+    const [click3, setClick3] = useState(false)
+    const [click4, setClick4] = useState(false)
+    const [click5, setClick5] = useState(false)
+    const [click6, setClick6] = useState(false)
     return (
         <div className="footer">
             <div className="footer_container">
@@ -31,7 +37,7 @@ function Footer() {
                     <Link to={"/"}>Uzumda soting</Link>
                     <Link to={"/"}>Sotuvchi kabinetiga kirish</Link>
                 </div>
-                <div className="footer_col">
+                <div className="footer_coll">
                     <h4>Ilovani yuklab olish</h4>
                     <div className="container_item">
                         <div className="app_store">
@@ -51,6 +57,51 @@ function Footer() {
                         <img src={logos_4} alt="" />
                     </div>
                 </div>
+            </div>
+            <div className="acardion_container">
+                <button onClick={() => setClick1(!click1)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>accordion</h3>
+                        {click1 ? <BsChevronDown /> : <BsChevronUp />}
+                    </div>
+                    {
+                        click1 && (
+                            <div className="hidden_cart">
+                                <p>{footerData[0].title}</p>
+                                <span>{footerData[0].lists}</span>
+                            </div>
+                        )
+                    }
+                </button>
+                <button onClick={() => setClick2(!click2)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>accordion</h3>
+                        {click2 ? <BsChevronDown /> : <BsChevronUp />}
+                    </div>
+                    {
+                        click2 && (
+                            <div className="hidden_cart">
+                                <p>{footerData[1].title}</p>
+                                <span>{footerData[1].lists}</span>
+                            </div>
+                        )
+                    }
+                </button>
+                <button onClick={() => setClick3(!click3)} className="accordion_header_btn">
+                    <div className="click_header">
+                        <h3>accordion</h3>
+                        {click3 ? <BsChevronDown /> : <BsChevronUp />}
+                    </div>
+                    {
+                        click3 && (
+                            <div className="hidden_cart">
+                                <p>{footerData[2].title}</p>
+                                <span>{footerData[2].lists}</span>
+                            </div>
+                        )
+                    }
+                </button>
+                
             </div>
         </div>
     )
