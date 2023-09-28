@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/Header'
-import HomeProducts from '../../components/homeProducts/HomeProducts'
 import CardItem1 from '../../components/cards/card_item1/CardItem1'
 import Footer from '../../components/footer/Footer'
 import MYswiper from '../../components/swiper/Swiper'
@@ -21,10 +20,9 @@ function Home() {
     return (
         <div className='home'>
             <Header />
-            <HomeProducts />
             <MYswiper />
-            <CardItem1 componentName={"Tugulgan kun"} data={product} />
-            <CardItem1 componentName={"Elektronika"} data={product} />
+            {/* <CardItem1 componentName={"Tugulgan kun"} data={product} />
+            <CardItem1 componentName={"Elektronika"} data={product} /> */}
             <Footer />
         </div>
     )

@@ -12,25 +12,15 @@ import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { FiX, FiChevronRight } from "react-icons/fi";
 import { katalogData } from "../../static/headerData";
-<<<<<<< HEAD
-import { HiBars3 } from 'react-icons/hi2'
-=======
 import { HiBars3 } from "react-icons/hi2";
->>>>>>> origin/Gulnoza
 import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
 
 function Header() {
-<<<<<<< HEAD
-  const dispatch = useDispatch()
-  const catalogState = useSelector(s => s.katalog)
-  const [openSidebar, setOpenSidebar] = useState(false)
-=======
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
->>>>>>> origin/Gulnoza
 
   return (
     <header>
@@ -38,18 +28,14 @@ function Header() {
       <div className="header_center">
         {openSidebar && <Sidebar setOpenSidebar={setOpenSidebar} />}
         <div className="header-logo-icon">
-<<<<<<< HEAD
-          <HiBars3 onClick={() => setOpenSidebar(!openSidebar)} className="open-sidebar" />
-=======
           <HiBars3
             onClick={() => setOpenSidebar(!openSidebar)}
             className="open-sidebar"
           />
->>>>>>> origin/Gulnoza
           <Link to={"/"} className="header_logo">
             <img src={logo} alt="" />
           </Link>
-        </div>
+        </div >
 
         <button
           onClick={() => dispatch(OPEN_CATALOG())}
@@ -60,34 +46,36 @@ function Header() {
         </button>
         {/* -------- katalog -------------- */}
 
-        {catalogState && (
-          <div className="catalog_wrapper">
-            {katalogData.map((katalogItem, index) => (
-              <div key={index} className="catalog_wrapper_item">
-                {katalogItem.title.icon}
-                <p>{katalogItem.title.titleName}</p>
-                <FiChevronRight />
-                <div className="catalog_wrapper_item_section">
-                  <h2>{katalogItem.title.titleName}</h2>
-                  <div className="catalog_wrapper_item_section_links">
-                    {katalogItem.collection.map((item, index) => (
-                      <div key={index}>
-                        <h4>{item.collectionItemName}</h4>
-                        <ul>
-                          {item.collectionItemLinks.map((link_item, index) => (
-                            <li key={index}>
-                              <Link to={"/"}>{link_item}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+        {
+          catalogState && (
+            <div className="catalog_wrapper">
+              {katalogData.map((katalogItem, index) => (
+                <div key={index} className="catalog_wrapper_item">
+                  {katalogItem.title.icon}
+                  <p>{katalogItem.title.titleName}</p>
+                  <FiChevronRight />
+                  <div className="catalog_wrapper_item_section">
+                    <h2>{katalogItem.title.titleName}</h2>
+                    <div className="catalog_wrapper_item_section_links">
+                      {katalogItem.collection.map((item, index) => (
+                        <div key={index}>
+                          <h4>{item.collectionItemName}</h4>
+                          <ul>
+                            {item.collectionItemLinks.map((link_item, index) => (
+                              <li key={index}>
+                                <Link to={"/"}>{link_item}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )
+        }
 
         <div className="header_searchbar">
           <input type="search" placeholder="Mahsulotlar va turkumlar izlash" />
@@ -102,29 +90,22 @@ function Header() {
             <span>Bahromjon</span>
           </Link>
 
-<<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
-            <AiOutlineHeart />
-            <span>Sevimlilar</span>
-          </Link>
-=======
-        <Link to={"/heart"} className="header_user">
-          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
-          
-          <AiOutlineHeart />
-          Sevimlilar
-        </Link>
->>>>>>> origin/msoleh01
+            {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
 
-          <Link to={"/user"} className="header_user">
+            <AiOutlineHeart />
+            Sevimlilar
+          </Link>
+
+          <Link to={"/cart"} className="header_user">
             <BsCart />
             <span>Savat</span>
           </Link>
-        </div>
-      </div>
+        </div >
+      </div >
       <HeaderBottom />
       {/* <Sidebar /> */}
-    </header>
+    </header >
   );
 }
 

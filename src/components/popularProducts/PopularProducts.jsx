@@ -170,7 +170,7 @@ const popularProduct = [
 
 
 function PopularProducts() {
-  const [addatHeart , setAddatHeart] = useState(false)
+  const [addatHeart, setAddatHeart] = useState(false)
   return (
     <div className='popular_products'>
       <h2>Ommabop mahsulotlar</h2>
@@ -183,17 +183,13 @@ function PopularProducts() {
                 <div className="top_cart">
                   <Link to={`/single-page/${item.id}`}><img src={item.img} alt={item.data} /></Link>
                   <div className="icon_heart">
-                    <button onClick={()=> setAddatHeart(!addatHeart)}>
-                      {addatHeart ? <BsHeartFill className='heart_red'/> : <PiHeartThin/>  }
+                    <button onClick={() => setAddatHeart(!addatHeart)}>
+                      {addatHeart ? <BsHeartFill className='heart_red' /> : <PiHeartThin />}
                     </button>
                   </div>
                 </div>
                 <div className="bottom_cart_data">
-<<<<<<< HEAD
-                  <span>{item.data.slice(0, 29) + " ..."} </span>
-=======
-                  <span>{item.data.slice(0 , 25) + " ..."} </span>
->>>>>>> origin/msoleh01
+                  <span>{item.data.slice(0, 25) + " ..."} </span>
                   <div className="card_price">
                     <div className="left_price">
                       <s>{item.price + " so'm"}</s>

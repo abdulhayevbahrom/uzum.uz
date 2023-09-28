@@ -9,7 +9,7 @@ import { Add_To_Heart } from '../../../redux/addToHeart'
 function CardItem1({ data, componentName }) {
   const dispatch = useDispatch()
   const heartData = useSelector(s => s.addToHeart).map(i => i.id)
-  
+
 
 
   return (
@@ -34,14 +34,14 @@ function CardItem1({ data, componentName }) {
 
               </div>
             </Link>
-            <p>{item.title}</p>
+            <p>{item.title.length > 50 ? item.title.slice(0, 50) + "..." : item.title}</p>
             <b>5.0 (baxo 36)</b>
-            <p className='sariq'>{item.price} $</p>
+            <p className='sariq'>{Math.ceil(item.price / 12)} so'm oyiga</p>
             <div className="productPrice">
-            <div className='price'>  
-            <s>7000 so'm </s>
-              <b>5000 so'm </b></div>
-            < TbShoppingBagPlus className='shopicon' />
+              <div className='price'>
+                <s>{Math.ceil(item.price + (item.price % 5))} so'm </s>
+                <b>{item.price} so'm </b></div>
+              < TbShoppingBagPlus className='shopicon' />
             </div>
           </div>
         ))}

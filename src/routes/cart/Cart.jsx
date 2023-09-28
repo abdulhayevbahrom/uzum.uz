@@ -1,21 +1,27 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import Header from '../../components/header/Header'
+import Footer from '../../components/footer/Footer';
+import AddProducts from '../../components/addProducts/AddProducts'
+import CartData from '../../components/cartData/CartData';
 
 function Cart() {
     let cartData = useSelector((s) => s.addToCart)
+
+
+    document.title = "Savat - Uzum"
     return (
         <div className='cart'>
-            {
-                cartData.map((pro, index) => {
-                    return (
-                        <div key={index} className='main_item'>
-                            <img src={pro.image} alt={pro.title} title={pro.title} />
-                            <p>{pro.title.slice(0, 35)}</p>
-                            <b>{pro.price} <s>{pro.price + pro.price % 10}</s> </b>
-                        </div>
-                    )
-                })
-            }
+            <div>
+                <Header />
+                {
+                    !cartData.length ?
+                        <CartData />
+                        :
+                        <AddProducts />
+                }
+                <Footer />
+            </div>
         </div>
     )
 }
