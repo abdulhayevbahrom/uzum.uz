@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import HeaderTop from "./headerTop/HeaderTop";
@@ -16,11 +15,13 @@ import { HiBars3 } from "react-icons/hi2";
 import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
-
+import RegisterForm from "../Register/Register";
 function Header() {
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [openRegister, setOpenRegister] = useState(false);
+  let ism = JSON.parse(localStorage.getItem("user"))?.name;
 
   return (
     <header>
@@ -83,15 +84,21 @@ function Header() {
             <GoSearch />
           </button>
         </div>
-
+        {openRegister && <RegisterForm setOpenRegister={setOpenRegister} />}
         <div className="header-3links">
-          <Link to={"/user"} className="header_user">
+          <button
+            onClick={() => setOpenRegister(!openRegister)}
+            className="header_user"
+          >
             <BiUser />
-            <span>Bahromjon</span>
-          </Link>
+            <span className="header-user-text">{ism ? ism : "Kirish"}</span>
+          </button>
 
           <Link to={"/heart"} className="header_user">
             {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
+            <AiOutlineHeart />
+            <span className="header-user-text">Sevimlilar</span>
+            {/* </Link> */}
 
             <AiOutlineHeart />
             Sevimlilar
@@ -99,7 +106,7 @@ function Header() {
 
           <Link to={"/cart"} className="header_user">
             <BsCart />
-            <span>Savat</span>
+            <span className="header-user-text">Savat</span>
           </Link>
         </div >
       </div >

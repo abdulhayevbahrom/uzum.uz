@@ -178,14 +178,20 @@
   font-size: 20px;
 }
 
+.header-user-text{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 @media (max-width: 1200px) {
-  .header_user span {
+  .header_user .header-user-text{
     display: none;
   }
 }
 @media (max-width: 950px) {
   .header_searchbar,
-  .header_center button {
+  .header_center button:not(.header_user) {
     display: none;
   }
   .header_center {
@@ -202,8 +208,11 @@
   }
 }
 @media (max-width: 400px) {
-  .header_logo {
-    display: none;
+  .header_logo img {
+    width: 130px;
+    height: 70px;
+    display: flex;
+    align-items: center;
   }
 }
 

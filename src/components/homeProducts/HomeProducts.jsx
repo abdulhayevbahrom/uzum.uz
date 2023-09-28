@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { NavLink } from "react-router-dom";
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-import { NavLink } from 'react-bootstrap'
+// import { NavLink } from 'react-bootstrap'
 import Header from '../header/Header'
 import { useParams } from 'react-router-dom'
 // import Tarkib from './tarkib/Tarkib';
@@ -17,7 +18,7 @@ function HomeProducts() {
     let { id } = useParams()
     const [imgIndex, setImgIndex] = useState(0)
 
-    let singleData = data.find(i => i.id.toString() === id)
+    let singleData = data?.find(i => i.id.toString() === id)
     console.log(singleData)
 
     let prices = 29000
@@ -41,9 +42,9 @@ function HomeProducts() {
                         <div className="homeproducts_boxs_left_carousel">
                             <div className="homeproducts_boxs_left_carousel_left">
                                 {
-                                    singleData.images?.map((img, index) =>
+                                    singleData?.images?.map((img, index) =>
                                         <div onClick={() => setImgIndex(index)} key={index} className="homeproducts_boxs_left_carousel_left_img">
-                                            <img src={img} alt={singleData.title} title={singleData.title} />
+                                            <img src={img} alt={singleData?.title} title={singleData?.title} />
                                         </div>
 
                                     )
@@ -52,7 +53,7 @@ function HomeProducts() {
                             </div>
                             <div className="homeproducts_boxs_left_carousel_right">
                                 <div className="homeproducts_boxs_left_carousel_right_imgs">
-                                    <img src={singleData.images[imgIndex]} alt="" />
+                                    <img src={singleData?.images[imgIndex]} alt="" />
                                 </div>
 
                             </div>

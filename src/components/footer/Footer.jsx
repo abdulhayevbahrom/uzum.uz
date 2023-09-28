@@ -1,16 +1,13 @@
 import React from "react";
 import "./Footer.css"
-import ScrollToTop from "react-scroll-to-top";
 import { Link } from 'react-router-dom'
-import { Accordion } from 'react-bootstrap'
 import src from "../../assets/png-transparent-apple-logo-iphone-computer-apple-logo-company-heart-logo-removebg-preview.png"
 import img from "../../assets/images-removebg-preview.png"
 import logos from "../../assets/606_instagram-removebg-preview.png"
 import logos_2 from "../../assets/Без_названия-removebg-preview.png"
 import logos_3 from "../../assets/Без_названия__1_-removebg-preview.png"
 import logos_4 from "../../assets/Без_названия__2_-removebg-preview.png"
-import { footerData } from "../../static/footerData";
-
+import ScrollToTop from "react-scroll-to-top";
 
 function Footer() {
     return (

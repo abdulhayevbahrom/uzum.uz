@@ -1,0 +1,159 @@
+.RegisterForm .form_container {
+  max-width: 450px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 110;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(12, 11, 11, 0.5);
+  z-index: 100;
+  backdrop-filter: blur(1px);
+}
+
+.form_close {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.form_logout {
+  left: 20px;
+  position: absolute;
+  font-size: 22px;
+  color: red;
+  top: 28px;
+  cursor: pointer;
+}
+
+.form_container h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input_box {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #605a5a;
+}
+
+.input_box input:focus {
+  border-color: #7d2ae8;
+}
+
+.input_box svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #605a5a;
+}
+.show {
+  position: relative;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shov svg {
+  position: absolute;
+}
+
+.input_box .iconic {
+  left: 0;
+}
+
+.input_box input:focus ~ .iconic {
+  color: #7d2ae8;
+}
+
+.input_box .pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login_signup a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.login_signup a:hover {
+  text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+
+.checkbox input {
+  accent-color: #7d2ae8;
+}
+
+.checkbox span {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+
+.form_container .button {
+  background: #7d2ae8;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form_container label {
+  font-size: 12px;
+  color: #0b0217;
+}
