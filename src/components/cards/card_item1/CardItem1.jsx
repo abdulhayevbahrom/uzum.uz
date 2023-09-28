@@ -5,10 +5,13 @@ import { AiFillHeart, AiOutlineHeart, AiOutlineRight } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Add_To_Heart } from '../../../redux/addToHeart'
+import {ADD_TO_CART} from '../../../redux/addToCart'
+import { toast } from "react-toastify";
 
 function CardItem1({ data, componentName }) {
   const dispatch = useDispatch()
   const heartData = useSelector(s => s.addToHeart).map(i => i.id)
+  const cartData = useSelector(s => s.addToCart).map(i => i.id)
   
 
 
@@ -41,7 +44,19 @@ function CardItem1({ data, componentName }) {
             <div className='price'>  
             <s>7000 so'm </s>
               <b>5000 so'm </b></div>
-            < TbShoppingBagPlus className='shopicon' />
+              {
+              cartData.some(i => i === item.id) ?
+                <>
+                  <TbShoppingBagPlus className='shopicon' onClick={() => dispatch(ADD_TO_CART({ pro: item }))} />
+                  {toast.success("You have successfully registered", {
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 1500,
+                    hideProgressBar: true,
+                  })}
+                </>
+                :
+                <TbShoppingBagPlus className='shopicon' onClick={() => dispatch(ADD_TO_CART({ pro: item }))} />
+            }
             </div>
           </div>
         ))}
