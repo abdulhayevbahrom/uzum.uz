@@ -16,15 +16,26 @@ import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
 import RegisterForm from "../Register/Register";
+import data from '../../static/bannerDataElektronik'
+
+
 function Header() {
   const dispatch = useDispatch();
   const catalogState = useSelector((s) => s.katalog);
   const [openSidebar, setOpenSidebar] = useState(false);
-<<<<<<< HEAD
   const [openRegister, setOpenRegister] = useState(false);
   let ism = JSON.parse(localStorage.getItem("user"))?.name;
-=======
->>>>>>> origin/diyora
+
+  const [searchResult, setSearchResult] = useState(null)
+
+  function search(value) {
+    if (!value) {
+      return setSearchResult(null)
+    }
+    let result = data.filter(i => i.title.toLowerCase().includes(value.toLowerCase()))
+    setSearchResult(result)
+  }
+  console.log(searchResult);
 
   return (
     <header>
@@ -88,10 +99,19 @@ function Header() {
         }
 
         <div className="header_searchbar">
-          <input type="search" placeholder="Mahsulotlar va turkumlar izlash" />
+          <input type="search" placeholder="Mahsulotlar va turkumlar izlash" onChange={(e) => search(e.target.value)} />
           <button>
             <GoSearch />
           </button>
+
+          <div className="searchResult" style={{ display: searchResult?.length ? "flex" : "none" }} >
+            {
+              searchResult?.map((item, index) =>
+                <Link to={`/single-page/${item.id}`} key={index} >{item.title}</Link>
+              )
+            }
+          </div>
+
         </div>
         {openRegister && <RegisterForm setOpenRegister={setOpenRegister} />}
         <div className="header-3links">
@@ -103,25 +123,17 @@ function Header() {
             <span className="header-user-text">{ism ? ism : "Kirish"}</span>
           </button>
 
-<<<<<<< HEAD
           <Link to={"/heart"} className="header_user">
-           
+            {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
 
             <AiOutlineHeart />
-            Sevimlilar
-=======
-        <Link to={"/heart"} className="header_user">
-          {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
-          
-          <AiOutlineHeart />
-          Sevimlilar
-        </Link>
+            <span>Sevimlilar</span>
+          </Link>
 
-          <Link to={"/cart"} className="header_user">
+          {/* <Link to={"/cart"} className="header_user">
             <BsCart />
             <span>Savat</span>
->>>>>>> origin/diyora
-          </Link>
+          </Link> */}
 
           <Link to={"/cart"} className="header_user">
             <BsCart />

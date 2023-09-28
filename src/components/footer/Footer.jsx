@@ -7,7 +7,7 @@ import logos from "../../assets/606_instagram-removebg-preview.png"
 import logos_2 from "../../assets/Без_названия-removebg-preview.png"
 import logos_3 from "../../assets/Без_названия__1_-removebg-preview.png"
 import logos_4 from "../../assets/Без_названия__2_-removebg-preview.png"
-import ScrollToTop from "react-scroll-to-top";
+// import ScrollToTop from "react-scroll-to-top";
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import { footerData } from "../../static/footerData";
 
@@ -18,14 +18,11 @@ function Footer() {
     const [click3, setClick3] = useState(false)
     return (
         <div className="footer">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <div className="acardion_container">
                 <button onClick={() => setClick1(!click1)} className="accordion_header_btn">
                     <div className="click_header">
                         <h3>Biz haqimizda</h3>
-                        {click1 ? <BsChevronUp/> : <BsChevronDown />}
+                        {click1 ? <BsChevronUp /> : <BsChevronDown />}
                     </div>
                     {
                         click1 && (
@@ -39,7 +36,7 @@ function Footer() {
                 <button onClick={() => setClick2(!click2)} className="accordion_header_btn">
                     <div className="click_header">
                         <h3>Foydalanuvchilarga</h3>
-                        {click2 ? <BsChevronUp/> : <BsChevronDown />}
+                        {click2 ? <BsChevronUp /> : <BsChevronDown />}
                     </div>
                     {
                         click2 && (
@@ -53,7 +50,7 @@ function Footer() {
                 <button onClick={() => setClick3(!click3)} className="accordion_header_btn">
                     <div className="click_header">
                         <h3>Tadbirkorlarga</h3>
-                        {click3 ? <BsChevronUp/> : <BsChevronDown />}
+                        {click3 ? <BsChevronUp /> : <BsChevronDown />}
                     </div>
                     {
                         click3 && (
@@ -64,13 +61,10 @@ function Footer() {
                         )
                     }
                 </button>
-                
+
             </div>
->>>>>>> origin/raxmatullo
-            <ScrollToTop smooth top={20} />
-=======
-            {/* <ScrollToTop smooth top={20}/> */}
->>>>>>> origin/diyora
+            {/* <ScrollToTop smooth top={20} /> */}
+            {/* <ScrollToTop smooth top={20} /> */}
             <div className="footer_container">
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>
@@ -103,12 +97,12 @@ function Footer() {
                     <h4>Uzum ijtimoiy tarmoqlarda</h4>
                     <div className="social">
                         <div className="top">
-                        <img src={logos} alt="" />
-                        <img src={logos_2} alt="" />
+                            <img src={logos} alt="" />
+                            <img src={logos_2} alt="" />
                         </div>
                         <div className="bottom">
-                        <img src={logos_3} alt="" />
-                        <img src={logos_4} alt="" />
+                            <img src={logos_3} alt="" />
+                            <img src={logos_4} alt="" />
                         </div>
                     </div>
                 </div>

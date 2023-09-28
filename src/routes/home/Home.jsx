@@ -6,26 +6,20 @@ import MYswiper from '../../components/swiper/Swiper'
 import axios from 'axios'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import data from '../../static/bannerDataElektronik'
 
 function Home() {
-    let productAPI = "https://fakestoreapi.com/products";
-    const [product, setproduct] = useState([])
-    useEffect(() => {
-        axios
-            .get(productAPI)
-            .then((res) => setproduct(res.data))
-            .catch((err) => console.log(err))
-    }, []);
-
-    // let elektronikaData = product.filter(i => i.type === "elektornika")
-
+    let electronic = data.filter(i => i.type === "Elektronika")
+    let kiyim = data.filter(i => i.type === "Kiyim")
     return (
         <div className="home">
             <ToastContainer />
             <Header />
             <MYswiper />
-            <CardItem1 componentName={"Tugulgan kun"} data={product} />
-            <CardItem1 componentName={"Elektronika"} data={product} />
+            <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
+            <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
+            <CardItem1 componentName={"Tugulgan kun"} data={electronic} />
+            <CardItem1 componentName={"Elektronika"} data={kiyim} />
             <Footer />
         </div>
     );

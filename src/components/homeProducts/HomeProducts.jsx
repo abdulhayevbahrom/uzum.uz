@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import './HomeProducts.css'
 import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from "react-icons/sl"
@@ -8,15 +7,7 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 // import { NavLink } from 'react-bootstrap'
 import Header from '../header/Header'
 import { useParams } from 'react-router-dom'
-=======
-import React,{} from 'react'
-import './HomeProducts.css'
-import { AiFillStar, AiOutlineHeart } from 'react-icons/ai'
-import { SlBasket } from "react-icons/sl"
-import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
->>>>>>> origin/diyora
+
 // import Tarkib from './tarkib/Tarkib';
 // import Olchamm from './olchamm/Olchamm';
 // import Korsatma from './korsatma/Korsatma';
@@ -87,7 +78,7 @@ function HomeProducts() {
                             </h4>
                         </div>
                         <h2>{singleData?.description}</h2>
-                        <h3><span>{price} / birlik </span> <s>{price*1.5}</s></h3>
+                        <h3><span>{price} / birlik </span> <s>{price * 1.5}</s></h3>
                         <p className='homeproducts_boxs_right_4 column_media'><span>Sotuvchi: </span>
                             <span><a href="/">{singleData?.type}</a></span>
                         </p>
@@ -147,7 +138,7 @@ function HomeProducts() {
             <div className="sharx_page">
                 <div className="sharx_page_header1">
                     <div className="sharx_page_header1_items">
-                        <a href="">Mahsulot tavsifi</a>
+                        <a href="/">Mahsulot tavsifi</a>
                     </div>
                 </div>
                 <div className="sharx_page_banner_pagess">
@@ -156,11 +147,11 @@ function HomeProducts() {
             </div>
             <div className="header_bottom_pages">
                 <div className='header_bottom_pages_price'>
-                <p>Narx umumiy:</p>
-                <p>{price} so'm</p>
+                    <p>Narx umumiy:</p>
+                    <p>{price} so'm</p>
                 </div>
                 <button className='herat_changes' onClick={() => setAddatHeart(!addatHeart)}>
-                    {addatHeart ? <BsHeartFill style={{ color: "#572bd1", fontSize:"22px" }} className='heart_red' /> : <PiHeartThin style={{fontSize:"22px"}} />}
+                    {addatHeart ? <BsHeartFill style={{ color: "#572bd1", fontSize: "22px" }} className='heart_red' /> : <PiHeartThin style={{ fontSize: "22px" }} />}
                 </button>
                 <button className='header_bottom_page_bottoms'>Savatga </button>
             </div>
