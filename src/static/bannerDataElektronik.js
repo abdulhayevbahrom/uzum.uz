@@ -65,7 +65,7 @@ const allData = [
     },
     {
         title: "Planshet",
-        description: "Planshet va telefonlar uchun ushlagich, 360 gradus metall sirtli",
+        description: "Planshet va telefonlar metall sirtli",
         price: 49000,
         images: ["https://images.uzum.uz/cjhfidbk9fqe2mb6bq7g/original.jpg", "https://images.uzum.uz/cihc8k36edfostii9jcg/original.jpg", "https://images.uzum.uz/cjhfid4jvf2i5uiugai0/original.jpg", "https://images.uzum.uz/cjhfidcvutve1vhnublg/original.jpg", "https://images.uzum.uz/cjhfidcvutve1vhnubl0/original.jpg"],
         type: "Elektronika",

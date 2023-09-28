@@ -16,7 +16,7 @@ function RegisterForm({ setOpenRegister }) {
   const validName = new RegExp("^[A-Z][a-z].{4,}$");
   const validSurname = new RegExp("^[A-Z][a-z].{4,}$");
   const validPassword = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{7,16}$");
-  const validNumber = new RegExp("^[0-9].{8,}$");
+  const validNumber = new RegExp("^[0-9].{8,}$"); 
   const [email, setEmail] = useState(user ? user.email : "");
   const [password, setPassword] = useState(user ? user.password : "");
   const [name, setName] = useState(user ? user.name : "");

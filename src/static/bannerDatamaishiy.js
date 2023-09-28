@@ -14,7 +14,7 @@ export const MaishiyData = [
     },
     {
         title: "Maishiy texnika",
-        description: "Noutbuk Lenovo V15 Intel Celeron N4020 DDR4 4 GB, 256 GB SSD, Iron Grey, 15.6",
+        description: "Noutbuk Lenovo56 GB SSD, Grey, 15.6",
         price: 2599000,
         images: ["https://images.uzum.uz/ck2348svutvccfo2b4p0/original.jpg", "https://images.uzum.uz/ck2348bk9fq74920hla0/original.jpg", "https://images.uzum.uz/ck2348cvutvccfo2b4og/original.jpg", "https://images.uzum.uz/ck23484jvf2qegt3n5q0/original.jpg","https://images.uzum.uz/ck23484vutvccfo2b4ng/original.jpg"],
         type: "Maishiy texnika",
@@ -66,7 +66,7 @@ export const MaishiyData = [
     },
     {
         title: "Maishiy texnika",
-        description: "Planshet va telefonlar uchun ushlagich, 360 gradus metall sirtli",
+        description: "Planshet va telefonla0 gradus metall sirtli",
         price: 49000,
         images: ["https://images.uzum.uz/cjhfidbk9fqe2mb6bq7g/original.jpg", "https://images.uzum.uz/cihc8k36edfostii9jcg/original.jpg", "https://images.uzum.uz/cjhfid4jvf2i5uiugai0/original.jpg", "https://images.uzum.uz/cjhfidcvutve1vhnublg/original.jpg","https://images.uzum.uz/cjhfidcvutve1vhnubl0/original.jpg"],
         type: "Maishiy texnika",
@@ -79,7 +79,7 @@ export const MaishiyData = [
     },
     {
         title: "Maishiy texnika",
-        description: "Simsiz quloqchinlar Huawei FreeBuds SE",
+        description: "Simsiz quloqchinlar Huawei SE",
         price: 450000,
         images: ["https://images.uzum.uz/cihc8htenntd8rfcqa10/original.jpg", "https://images.uzum.uz/cihc8k36edfostii9jcg/original.jpg", "https://images.uzum.uz/cihc8fd40v9pplt561e0/original.jpg", "https://images.uzum.uz/cihc8t540v9pplt561g0/original.jpg","https://images.uzum.uz/cihc8gb6edfostii9jb0/original.jpg"],
         type: "Maishiy texnika",
@@ -104,7 +104,7 @@ export const MaishiyData = [
     },
     {
         title: "Maishiy texnika",
-        description: "O'yin pristavkasi Game Stick Lite 64 Gb, 4k Ultra HD, 2 geympad, 10000 ta oyin",
+        description: "O'yin pristavkasi Game Stick Lite 6 ta oyin",
         price: 298000,
         images: ["https://images.uzum.uz/cevcnagv1htd23akmkvg/original.jpg", "https://images.uzum.uz/cevcnagl08k0o9qhk2dg/original.jpg", "https://images.uzum.uz/cevcnagv1htd23akmkv0/original.jpg", "https://images.uzum.uz/cevcnagl08k0o9qhk2e0/original.jpg","https://images.uzum.uz/cevcnaivtie1lhbglbq0/original.jpg","https://images.uzum.uz/cevcnagl08k0o9qhk2eg/original.jpg"],
         type: "Maishiy texnika",
