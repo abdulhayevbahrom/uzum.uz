@@ -16,20 +16,18 @@ function Footer() {
     const [click1, setClick1] = useState(false)
     const [click2, setClick2] = useState(false)
     const [click3, setClick3] = useState(false)
-    const [click4, setClick4] = useState(false)
-    const [click5, setClick5] = useState(false)
-    const [click6, setClick6] = useState(false)
     return (
         <div className="footer">
             <div className="acardion_container">
                 <button onClick={() => setClick1(!click1)} className="accordion_header_btn">
                     <div className="click_header">
-                        <h3>accordion</h3>
+                        <h3>Biz haqimizda</h3>
                         {click1 ? <BsChevronUp/> : <BsChevronDown />}
                     </div>
                     {
                         click1 && (
                             <div className="hidden_cart">
+                                <Link>{footerData[0].title}</Link>
                                 <Link>{footerData[0].lists}</Link>
                             </div>
                         )
@@ -37,12 +35,13 @@ function Footer() {
                 </button>
                 <button onClick={() => setClick2(!click2)} className="accordion_header_btn">
                     <div className="click_header">
-                        <h3>accordion</h3>
+                        <h3>Foydalanuvchilarga</h3>
                         {click2 ? <BsChevronUp/> : <BsChevronDown />}
                     </div>
                     {
                         click2 && (
                             <div className="hidden_cart">
+                                <Link>{footerData[1].title}</Link>
                                 <Link>{footerData[1].lists}</Link>
                             </div>
                         )
@@ -50,12 +49,13 @@ function Footer() {
                 </button>
                 <button onClick={() => setClick3(!click3)} className="accordion_header_btn">
                     <div className="click_header">
-                        <h3>Biz haqimizda</h3>
+                        <h3>Tadbirkorlarga</h3>
                         {click3 ? <BsChevronUp/> : <BsChevronDown />}
                     </div>
                     {
                         click3 && (
                             <div className="hidden_cart">
+                                <Link>{footerData[2].title}</Link>
                                 <Link>{footerData[2].lists}</Link>
                             </div>
                         )
