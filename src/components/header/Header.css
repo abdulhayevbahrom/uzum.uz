@@ -209,7 +209,7 @@
 @media (max-width: 950px) {
 
   .header_searchbar,
-  .header_center button:not(.header_user) {
+  .header_center button:not(.header_user, .sidebar-language) {
     display: none;
   }
 
@@ -233,7 +233,5 @@
   .header_logo img {
     width: 130px;
     height: 70px;
-    display: flex;
-    align-items: center;
   }
 }

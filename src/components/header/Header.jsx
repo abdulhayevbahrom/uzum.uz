@@ -16,8 +16,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN_CATALOG } from "../../redux/katalog";
 import RegisterForm from "../Register/Register";
-import data from '../../static/bannerDataElektronik'
-
+import data from "../../static/bannerDataElektronik";
 
 function Header() {
   const dispatch = useDispatch();
@@ -26,14 +25,16 @@ function Header() {
   const [openRegister, setOpenRegister] = useState(false);
   let ism = JSON.parse(localStorage.getItem("user"))?.name;
 
-  const [searchResult, setSearchResult] = useState(null)
+  const [searchResult, setSearchResult] = useState(null);
 
   function search(value) {
     if (!value) {
-      return setSearchResult(null)
+      return setSearchResult(null);
     }
-    let result = data.filter(i => i.title.toLowerCase().includes(value.toLowerCase()))
-    setSearchResult(result)
+    let result = data.filter((i) =>
+      i.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setSearchResult(result);
   }
   console.log(searchResult);
 
@@ -56,7 +57,7 @@ function Header() {
           <Link to={"/"} className="header_logo">
             <img src={logo} alt="" />
           </Link>
-        </div >
+        </div>
 
         <button
           onClick={() => dispatch(OPEN_CATALOG())}
@@ -67,51 +68,55 @@ function Header() {
         </button>
         {/* -------- katalog -------------- */}
 
-        {
-          catalogState && (
-            <div className="catalog_wrapper">
-              {katalogData.map((katalogItem, index) => (
-                <div key={index} className="catalog_wrapper_item">
-                  {katalogItem.title.icon}
-                  <p>{katalogItem.title.titleName}</p>
-                  <FiChevronRight />
-                  <div className="catalog_wrapper_item_section">
-                    <h2>{katalogItem.title.titleName}</h2>
-                    <div className="catalog_wrapper_item_section_links">
-                      {katalogItem.collection.map((item, index) => (
-                        <div key={index}>
-                          <h4>{item.collectionItemName}</h4>
-                          <ul>
-                            {item.collectionItemLinks.map((link_item, index) => (
-                              <li key={index}>
-                                <Link to={"/"}>{link_item}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
+        {catalogState && (
+          <div className="catalog_wrapper">
+            {katalogData.map((katalogItem, index) => (
+              <div key={index} className="catalog_wrapper_item">
+                {katalogItem.title.icon}
+                <p>{katalogItem.title.titleName}</p>
+                <FiChevronRight />
+                <div className="catalog_wrapper_item_section">
+                  <h2>{katalogItem.title.titleName}</h2>
+                  <div className="catalog_wrapper_item_section_links">
+                    {katalogItem.collection.map((item, index) => (
+                      <div key={index}>
+                        <h4>{item.collectionItemName}</h4>
+                        <ul>
+                          {item.collectionItemLinks.map((link_item, index) => (
+                            <li key={index}>
+                              <Link to={"/"}>{link_item}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          )
-        }
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="header_searchbar">
-          <input type="search" placeholder="Mahsulotlar va turkumlar izlash" onChange={(e) => search(e.target.value)} />
+          <input
+            type="search"
+            placeholder="Mahsulotlar va turkumlar izlash"
+            onChange={(e) => search(e.target.value)}
+          />
           <button>
             <GoSearch />
           </button>
 
-          <div className="searchResult" style={{ display: searchResult?.length ? "flex" : "none" }} >
-            {
-              searchResult?.map((item, index) =>
-                <Link to={`/single-page/${item.id}`} key={index} >{item.title}</Link>
-              )
-            }
+          <div
+            className="searchResult"
+            style={{ display: searchResult?.length ? "flex" : "none" }}
+          >
+            {searchResult?.map((item, index) => (
+              <Link to={`/single-page/${item.id}`} key={index}>
+                {item.title}
+              </Link>
+            ))}
           </div>
-
         </div>
         {openRegister && <RegisterForm setOpenRegister={setOpenRegister} />}
         <div className="header-3links">
@@ -124,26 +129,18 @@ function Header() {
           </button>
 
           <Link to={"/heart"} className="header_user">
-            {/* {()=> document.title = "Uzum - mahsulotlari kunning ertasiga yetkazib beriladigan ilk Oʻzbekiston savdo maydoni"} */}
-
             <AiOutlineHeart />
-            <span>Sevimlilar</span>
+            <span className="header-user-text">Sevimlilar</span>
           </Link>
-
-          {/* <Link to={"/cart"} className="header_user">
-            <BsCart />
-            <span>Savat</span>
-          </Link> */}
 
           <Link to={"/cart"} className="header_user">
             <BsCart />
             <span className="header-user-text">Savat</span>
           </Link>
-        </div >
-      </div >
+        </div>
+      </div>
       <HeaderBottom />
-      {/* <Sidebar /> */}
-    </header >
+    </header>
   );
 }
 

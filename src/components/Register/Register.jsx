@@ -16,7 +16,7 @@ function RegisterForm({ setOpenRegister }) {
   const validName = new RegExp("^[A-Z][a-z].{4,}$");
   const validSurname = new RegExp("^[A-Z][a-z].{4,}$");
   const validPassword = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{7,16}$");
-  const validNumber = new RegExp("^[0-9].{8,}$"); 
+  const validNumber = new RegExp("^[+0-9].{8,}$"); 
   const [email, setEmail] = useState(user ? user.email : "");
   const [password, setPassword] = useState(user ? user.password : "");
   const [name, setName] = useState(user ? user.name : "");
@@ -82,7 +82,7 @@ function RegisterForm({ setOpenRegister }) {
           onClick={handleClose}
         />
         <form className="register-form" onSubmit={handleSubmit}>
-          <h2>{!user ?  "Ro'yxatdan o'tish'"  : 'Malumotlaringiz'}</h2>
+          <h2>{!user ?  "Ro'yxatdan o'tish"  : 'Malumotlaringiz'}</h2>
 
           <div className="input_box">
             <input
@@ -158,7 +158,7 @@ function RegisterForm({ setOpenRegister }) {
           </div>
         </form>
       </div>
-      <div onClick={() => setOpenRegister(false)} className="overlay"></div>
+      <div onClick={handleClose} className="overlay"></div>
     </div>
   );
 }
