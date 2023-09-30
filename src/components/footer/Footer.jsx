@@ -68,6 +68,7 @@ function Footer() {
                 <div className="footer_col">
                     <h4>Biz haqimizda</h4>
 
+                    
                     <Link to={"/"}>Topshirish punktlari</Link>
                     <Link to={"/"}>Vakansiyalar</Link>
                 </div>
