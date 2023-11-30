@@ -62,20 +62,20 @@
   background-color: #e0e0f6;
 }
 
-.catalog_wrapper_item>svg:first-child {
+.catalog_wrapper_item > svg:first-child {
   font-size: 23px;
   margin-right: 8px;
   color: #444;
 }
 
-.catalog_wrapper_item>p {
+.catalog_wrapper_item > p {
   flex: 1;
   font-size: 14px;
   color: #141415;
   font-family: "Inter", sans-serif;
 }
 
-.catalog_wrapper_item>svg:last-child {
+.catalog_wrapper_item > svg:last-child {
   color: #666;
 }
 
@@ -104,29 +104,29 @@
   gap: 20px;
 }
 
-.catalog_wrapper_item_section_links>div>h4 {
+.catalog_wrapper_item_section_links > div > h4 {
   color: #333;
   margin-bottom: 15px;
   margin-top: 25px;
   font-family: "Inter", sans-serif;
 }
 
-.catalog_wrapper_item_section_links>div>ul {
+.catalog_wrapper_item_section_links > div > ul {
   list-style-type: none;
 }
 
-.catalog_wrapper_item_section_links>div>ul>li {
+.catalog_wrapper_item_section_links > div > ul > li {
   margin: 10px 0;
   font-family: "Inter", sans-serif;
 }
 
-.catalog_wrapper_item_section_links>div>ul>li>a {
+.catalog_wrapper_item_section_links > div > ul > li > a {
   text-decoration: none;
   color: #666;
   font-family: "Inter", sans-serif;
 }
 
-.catalog_wrapper_item_section_links>div>ul>li>a:hover {
+.catalog_wrapper_item_section_links > div > ul > li > a:hover {
   color: var(--main-color);
 }
 
@@ -150,7 +150,7 @@
   font-family: "Inter", sans-serif;
 }
 
-.header_searchbar>button {
+.header_searchbar > button {
   padding: 0 25px;
   height: 100%;
   border: none;
@@ -195,7 +195,7 @@
 }
 
 .header-user-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -207,7 +207,6 @@
 }
 
 @media (max-width: 950px) {
-
   .header_searchbar,
   .header_center button:not(.header_user, .sidebar-language) {
     display: none;
@@ -219,6 +218,9 @@
 
   .open-sidebar {
     display: block;
+  }
+  .header_user {
+    padding: 8px 10px;
   }
 }
 
